@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-ink: #10232B;
+  --color-paper: #FBFBF9;
+  --color-stone: #ECEEEB;
+  --color-slate: #6B7280;
+  --color-shalom-teal: #1E93A0;
+  --color-shalom-navy: #0E4A5C;
+  --color-shalom-gold: #C99B3C;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.draw-arc {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawArc 1.4s ease forwards 0.3s;
+}
+.arc-teal {
+  animation-delay: 0.6s;
+}
+@keyframes drawArc {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
