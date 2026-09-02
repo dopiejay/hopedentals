@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MenuIcon, XIcon, MessageCircleIcon, PhoneIcon, MapPinIcon, ClockIcon } from './Icons';
+import { MenuIcon, XIcon, MessageCircleIcon } from './Icons';
 import Wordmark from './Wordmark';
 
 const links = [
@@ -21,26 +21,6 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-stone bg-paper">
-      {/* TopBar */}
-      <div className="border-b border-stone/60 bg-stone/30 text-[0.78rem] text-slate">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-6 py-2">
-          <a href="tel:+265998951880" className="flex items-center gap-1.5 transition-colors hover:text-ink">
-            <PhoneIcon size={13} />
-            +265 998 95 18 80
-          </a>
-          <span className="hidden text-stone sm:inline">|</span>
-          <span className="flex items-center gap-1.5">
-            <ClockIcon size={13} />
-            Mon – Sat
-          </span>
-          <span className="hidden text-stone sm:inline">|</span>
-          <span className="flex items-center gap-1.5">
-            <MapPinIcon size={13} />
-            Blantyre &amp; Limbe
-          </span>
-        </div>
-      </div>
-
       {/* Main nav */}
       <div className="mx-auto flex max-w-6xl items-center gap-8 px-6 py-4">
         <div className="mr-auto">

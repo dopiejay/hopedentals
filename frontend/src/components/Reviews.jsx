@@ -1,4 +1,5 @@
-import { StarIcon } from './Icons';
+import { useState } from 'react';
+import { StarIcon, ArrowLeftIcon, ArrowRightIcon } from './Icons';
 
 const reviews = [
   {
@@ -19,6 +20,18 @@ const reviews = [
 ];
 
 export default function Reviews() {
+  const [index, setIndex] = useState(0);
+
+  function prev() {
+    setIndex((i) => (i - 1 + reviews.length) % reviews.length);
+  }
+
+  function next() {
+    setIndex((i) => (i + 1) % reviews.length);
+  }
+
+  const active = reviews[index];
+
   return (
     <section id="reviews" className="relative overflow-hidden bg-ink px-6 py-24 text-white">
       {/* Decorative gradient blobs */}
@@ -32,24 +45,55 @@ export default function Reviews() {
         </h2>
       </div>
 
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-5 md:grid-cols-3">
-        {reviews.map((r, i) => (
-          <blockquote
-            key={i}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6.5 transition-all duration-300 hover:border-shalom-gold/30 hover:bg-white/[0.07]"
-          >
-            <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-shalom-gold/5 blur-xl transition-all group-hover:scale-150" />
-            <div className="relative z-10">
-              <div className="mb-3 flex gap-0.5">
-                {Array.from({ length: r.rating }).map((_, j) => (
-                  <StarIcon key={j} size={14} className="text-shalom-teal" filled />
-                ))}
-              </div>
-              <p className="mb-3.5 text-[0.95rem] italic text-white/85 leading-relaxed">&ldquo;{r.quote}&rdquo;</p>
-              <cite className="text-[0.82rem] text-shalom-gold not-italic font-medium">— {r.author}</cite>
+      <div className="relative z-10 mx-auto max-w-3xl">
+        <blockquote className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] px-8 py-12 text-center sm:px-14">
+          <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-shalom-gold/5 blur-xl" />
+
+          <div className="relative z-10">
+            <div className="mb-5 flex justify-center gap-0.5">
+              {Array.from({ length: active.rating }).map((_, j) => (
+                <StarIcon key={j} size={16} className="text-shalom-teal" filled />
+              ))}
             </div>
-          </blockquote>
-        ))}
+            <p className="mb-6 text-[1.05rem] text-white/85 leading-relaxed">&ldquo;{active.quote}&rdquo;</p>
+            <cite className="text-[0.9rem] text-shalom-gold not-italic font-medium">— {active.author}</cite>
+          </div>
+        </blockquote>
+
+        {/* Controls */}
+        <div className="mt-10 flex items-center justify-center gap-6">
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Previous testimonial"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-shalom-gold hover:text-shalom-gold"
+          >
+            <ArrowLeftIcon size={20} />
+          </button>
+
+          <div className="flex gap-2.5">
+            {reviews.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setIndex(i)}
+                aria-label={`Go to testimonial ${i + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  i === index ? 'w-7 bg-shalom-gold' : 'w-2.5 bg-white/30 hover:bg-white/60'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Next testimonial"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-shalom-gold hover:text-shalom-gold"
+          >
+            <ArrowRightIcon size={20} />
+          </button>
+        </div>
       </div>
     </section>
   );

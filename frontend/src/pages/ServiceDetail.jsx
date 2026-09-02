@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
   ArrowRightIcon,
@@ -34,7 +33,6 @@ export default function ServiceDetail() {
   const Icon = service.icon;
   const hasIncludes = service.includes?.length > 0;
   const hasSteps = service.steps?.length > 0;
-  const hasFaqs = service.faqs?.length > 0;
 
   return (
     <>
@@ -82,44 +80,32 @@ export default function ServiceDetail() {
 
       {/* What to expect */}
       {hasSteps && (
-        <section className="bg-ink px-6 py-24 text-white">
-          <div className="mx-auto mb-12 max-w-xl text-center">
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
-              What to expect
-            </p>
-            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium">
-              A simple, guided process
-            </h2>
-          </div>
-          <div className={`mx-auto grid max-w-5xl gap-x-8 gap-y-10 sm:grid-cols-2 ${service.steps.length >= 5 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}>
-            {service.steps.map((step, i) => (
-              <div key={step.title}>
-                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-shalom-gold/20 font-display text-lg font-bold text-shalom-teal">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h3 className="mb-1.5 font-display text-lg font-medium">{step.title}</h3>
-                <p className="text-[0.88rem] text-white/70 leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* FAQs */}
-      {hasFaqs && (
-        <section className="bg-paper px-6 py-20">
-          <div className="mx-auto mb-10 max-w-xl text-center">
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">
-              Questions patients ask
-            </p>
-            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium">
-              Frequently asked questions
-            </h2>
-          </div>
-          <div className="mx-auto max-w-3xl space-y-3">
-            {service.faqs.map((f, i) => (
-              <FaqItem key={f.q} q={f.q} a={f.a} defaultOpen={i === 0} />
-            ))}
+        <section className="bg-white px-6 py-24">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.4fr]">
+            <div>
+              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">
+                What to expect
+              </p>
+              <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium text-ink">
+                A simple, guided process
+              </h2>
+              <p className="text-slate leading-relaxed">
+                Every treatment follows a clear path — planned around your needs and reviewed with you at each step.
+              </p>
+            </div>
+            <ol className="divide-y divide-stone border-y border-stone">
+              {service.steps.map((step, i) => (
+                <li key={step.title} className="flex items-start gap-5 py-6">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-shalom-gold/15 font-display text-lg font-bold text-shalom-navy">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="mb-1 font-display text-lg font-medium text-ink">{step.title}</h3>
+                    <p className="text-[0.9rem] text-slate leading-relaxed">{step.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
       )}
@@ -135,34 +121,5 @@ export default function ServiceDetail() {
         </Link>
       </div>
     </>
-  );
-}
-
-function FaqItem({ q, a, defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen);
-
-  return (
-    <div className="overflow-hidden rounded-2xl border border-stone bg-white">
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left"
-      >
-        <span className="font-semibold text-ink">{q}</span>
-        <span
-          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-stone text-lg font-bold text-shalom-navy transition-transform duration-300 ${
-            open ? 'rotate-45' : ''
-          }`}
-        >
-          +
-        </span>
-      </button>
-      <div className={`grid transition-all duration-300 ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-        <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-[0.9rem] text-slate leading-relaxed">{a}</p>
-        </div>
-      </div>
-    </div>
   );
 }

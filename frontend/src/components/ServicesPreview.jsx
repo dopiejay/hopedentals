@@ -9,7 +9,7 @@ export default function ServicesPreview() {
       <div className="mx-auto mb-16 max-w-2xl text-center">
         <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">What we offer</p>
         <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium">
-          Dental care for every <span className="italic text-shalom-gold">stage</span> of your smile.
+          Dental care for every <span className="text-shalom-gold">stage</span> of your smile.
         </h2>
       </div>
 

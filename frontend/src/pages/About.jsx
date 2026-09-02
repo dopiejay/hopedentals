@@ -1,6 +1,5 @@
 import { HeartIcon, AwardIcon, GemIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
-import { branches } from '../data/branches';
 const aboutImage = 'images/team.jpg';
 
 const philosophy = [
@@ -8,8 +7,6 @@ const philosophy = [
   { icon: AwardIcon, title: 'Quality', desc: 'Modern, well-equipped facilities supported by our clinical team and dental laboratory.', color: 'bg-teal-100/60 text-teal-700' },
   { icon: GemIcon, title: 'Trust', desc: 'A trusted name in Malawian dental care, built up over more than two decades.', color: 'bg-amber-100/60 text-amber-700' },
 ];
-
-const approach = ['Consult', 'Diagnose', 'Treat', 'Follow Up'];
 
 const team = [
   {
@@ -95,45 +92,6 @@ export default function AboutPage() {
               </div>
             );
           })}
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section className="bg-ink px-6 py-24 text-white">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Our approach</p>
-          <h2 className="mb-12 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium">
-            A simple, consistent patient journey
-          </h2>
-          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-            {approach.map((step, i) => (
-              <div key={step} className="flex items-center gap-6">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-shalom-gold/20 font-display text-lg font-bold text-shalom-teal">
-                    {i + 1}
-                  </span>
-                  <span className="font-display text-lg font-medium text-white">{step}</span>
-                </div>
-                {i < approach.length - 1 && <span className="hidden text-shalom-gold/50 sm:inline text-2xl">→</span>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Branches */}
-      <section className="bg-paper px-6 py-24">
-        <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">Our branches</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium">Find a branch near you</h2>
-        </div>
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-3">
-          {branches.map((b) => (
-            <div key={b.slug} className="rounded-3xl border border-stone bg-white p-7 text-center shadow-sm">
-              <h3 className="mb-1 font-display text-lg font-medium text-ink">{b.name}</h3>
-              <p className="text-[0.88rem] text-slate">{b.address}</p>
-            </div>
-          ))}
         </div>
       </section>
 

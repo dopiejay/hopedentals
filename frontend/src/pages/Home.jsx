@@ -32,7 +32,7 @@ export default function Home() {
       <Reviews />
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-shalom-navy to-shalom-gold px-6 py-20 text-center text-white">
+      <section className="bg-shalom-teal px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-xl">
           <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-medium text-white">
             Your smile deserves dedicated care.

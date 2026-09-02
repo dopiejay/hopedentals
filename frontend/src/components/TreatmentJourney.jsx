@@ -14,7 +14,7 @@ export default function TreatmentJourney() {
         <div className="mb-14 text-center">
           <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">How it works</p>
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium">
-            Your journey to a <span className="italic text-shalom-gold">healthier smile</span>.
+            Your journey to a <span className="text-shalom-gold">healthier smile</span>.
           </h2>
         </div>
 
