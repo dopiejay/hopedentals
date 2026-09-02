@@ -46,7 +46,7 @@ export default function AboutPage() {
           <div className="relative overflow-hidden rounded-3xl">
             <img
               src={aboutImage}
-              alt="Shalom Dental Services clinic"
+              alt="Shalom Dental Services Ltd clinic"
               className="aspect-[4/3] w-full object-cover"
               loading="lazy"
             />
@@ -58,7 +58,7 @@ export default function AboutPage() {
               A trusted name in Malawian dental care
             </h2>
             <p className="mb-4 text-slate leading-relaxed">
-              Shalom Dental Services has been providing dental care in Malawi for over two decades.
+              Shalom Dental Services Ltd has been providing dental care in Malawi for over two decades.
               Founded around the year 2000, it has grown into a multi-branch dental organisation
               serving patients across Blantyre and Limbe.
             </p>

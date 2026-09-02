@@ -1,28 +1,29 @@
+import { Link } from 'react-router-dom';
 import { SmileIcon, ShieldIcon, LayersIcon, AwardIcon } from './Icons';
 
 const features = [
   {
     icon: SmileIcon,
     title: 'Patient-Centred Care',
-    desc: 'A calm, reassuring experience built around your comfort at every visit.',
+    desc: 'Comfort and reassurance at every visit.',
     color: 'bg-shalom-gold/10 text-shalom-gold',
   },
   {
     icon: ShieldIcon,
     title: 'Modern Facilities',
-    desc: 'Well-equipped branches supported by an on-site dental laboratory.',
+    desc: 'Well-equipped branches with an on-site dental laboratory.',
     color: 'bg-teal-100/60 text-teal-700',
   },
   {
     icon: AwardIcon,
     title: 'Experienced Team',
-    desc: 'Dentists and therapists dedicated to professional, reliable treatment.',
+    desc: 'Dentists and therapists you can trust.',
     color: 'bg-amber-100/60 text-amber-700',
   },
   {
     icon: LayersIcon,
     title: 'Comprehensive Services',
-    desc: 'Preventive care, orthodontics, restorative work and implants — all in one place.',
+    desc: 'Preventive to restorative care, all in one place.',
     color: 'bg-blue-100/60 text-blue-700',
   },
 ];
@@ -38,7 +39,7 @@ export default function WhyUs() {
             The trusted choice for <span className="text-shalom-gold">your care</span>.
           </h2>
           <p className="mb-10 max-w-xl text-slate leading-relaxed">
-            For over two decades, Shalom Dental Services has delivered comfortable, professional
+            For over two decades, Shalom Dental Services Ltd has delivered comfortable, professional
             dental care across Blantyre and Limbe — backed by experienced clinicians and an on-site
             dental laboratory.
           </p>
@@ -59,14 +60,23 @@ export default function WhyUs() {
               );
             })}
           </div>
+
+          <div className="mt-10">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-shalom-navy"
+            >
+              About Us
+            </Link>
+          </div>
         </div>
 
         {/* Right: image */}
-        <div className="relative overflow-hidden rounded-3xl">
+        <div className="relative min-h-[320px] overflow-hidden rounded-3xl lg:self-stretch">
           <img
-            src="images/destist.jpg"
-            alt="A Shalom dental clinician with a patient"
-            className="aspect-[4/3] w-full object-cover"
+            src="images/why.jpg"
+            alt="The Shalom Dental Services Ltd team caring for a patient"
+            className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-shalom-navy/10 to-transparent" />

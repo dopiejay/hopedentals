@@ -1,5 +1,5 @@
 import { AwardIcon, MapPinIcon, LayersIcon } from './Icons';
-const aboutImage = 'images/dentist.jpg';
+const aboutImage = 'images/welcome.jpg';
 
 export default function TrustIntro() {
   return (
@@ -9,7 +9,7 @@ export default function TrustIntro() {
         <div className="relative overflow-hidden rounded-3xl">
           <img
             src={aboutImage}
-            alt="Patient care at Shalom Dental Services"
+            alt="Patient care at Shalom Dental Services Ltd"
             className="aspect-[4/3] w-full object-cover"
             loading="lazy"
           />
@@ -30,7 +30,7 @@ export default function TrustIntro() {
             A dental team built around<br />your care.
           </h2>
           <p className="mb-4 text-slate">
-            Shalom Dental Services is an established dental organisation serving Blantyre and Limbe
+            Shalom Dental Services Ltd is an established dental organisation serving Blantyre and Limbe
             for over two decades — providing clinical dental care and a dental laboratory under one
             trusted name, across multiple branches.
           </p>

@@ -35,9 +35,9 @@ export default function Footer() {
                 <PhoneIcon size={14} className="text-shalom-gold" />
                 +265 998 95 18 80
               </a>
-              <a href="mailto:info@shalomdental.mw" className="flex items-center gap-2 transition-colors hover:text-white">
+              <a href="mailto:shalomdentalservices@yahoo.com" className="flex items-center gap-2 transition-colors hover:text-white">
                 <MailIcon size={14} className="text-shalom-gold" />
-                info@shalomdental.mw
+                shalomdentalservices@yahoo.com
               </a>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-[0.78rem] text-white/40">
-          <p>&copy; {new Date().getFullYear()} Shalom Dental Services. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shalom Dental Services Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
