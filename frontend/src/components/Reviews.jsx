@@ -14,7 +14,7 @@ const reviews = [
   },
   {
     quote: 'Professional, modern, and genuinely caring. Booking at a branch near us was simple and the whole process was seamless. Best dental experience in Blantyre.',
-    author: 'Thandizo P.',
+    author: 'Shammy Bosco.',
     rating: 5,
   },
 ];
