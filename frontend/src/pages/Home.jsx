@@ -6,7 +6,6 @@ import TrustIntro from '../components/TrustIntro';
 import ServicesPreview from '../components/ServicesPreview';
 import WhyUs from '../components/WhyUs';
 import Branches from '../components/Branches';
-//import TreatmentJourney from '../components/TreatmentJourney';
 // import TeamPreview from '../components/TeamPreview';
 import Reviews from '../components/Reviews';
 // import FindUs from '../components/FindUs';
@@ -28,7 +27,7 @@ export default function Home() {
       <ServicesPreview />
       <WhyUs />
       <Branches />
-      <TreatmentJourney />
+      {/* <TreatmentJourney /> */}
       <Reviews />
 
       {/* CTA Section */}
