@@ -32,7 +32,7 @@ export default function Login() {
     <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
       {/* Left panel */}
       <div className="relative hidden flex-col justify-between bg-ink p-12 text-white md:flex">
-        <div className="flex items-center gap-2 font-display text-xl font-medium">
+        <div className="flex items-center gap-2 font-display text-xl font-bold">
           <ToothIcon className="text-shalom-gold" size={26} />
           Shalom<em className="not-italic text-shalom-teal">Dental</em>
         </div>
@@ -43,7 +43,7 @@ export default function Login() {
             <circle cx="140" cy="150" r="70" fill="#1E93A0" opacity="0.15" />
             <circle cx="260" cy="120" r="45" fill="#C99B3C" opacity="0.2" />
           </svg>
-          <p className="font-display text-2xl font-medium italic">
+          <p className="font-display text-2xl font-bold italic">
             "Manage your branches. Deliver a better patient experience."
           </p>
         </div>
@@ -54,12 +54,12 @@ export default function Login() {
       {/* Right panel */}
       <div className="flex flex-col justify-center px-8 py-16 sm:px-16">
         <div className="mx-auto w-full max-w-sm">
-          <div className="mb-8 flex items-center gap-2 font-display text-xl font-medium md:hidden">
+          <div className="mb-8 flex items-center gap-2 font-display text-xl font-bold md:hidden">
             <ToothIcon className="text-shalom-gold" size={24} />
             Shalom<em className="not-italic text-shalom-teal">Dental</em>
           </div>
 
-          <h1 className="mb-1 font-display text-2xl font-medium">Sign in</h1>
+          <h1 className="mb-1 font-display text-2xl font-bold">Sign in</h1>
           <p className="mb-8 text-sm text-slate">Access the Shalom Dental admin portal.</p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">

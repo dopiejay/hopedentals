@@ -24,7 +24,7 @@ export default function Hero() {
           <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
             Multi-branch dental care in Blantyre &amp; Limbe
           </p>
-          <h1 className="mb-5 font-display text-[clamp(2.2rem,5vw,3.8rem)] font-medium leading-[1.1] text-white">
+          <h1 className="mb-5 font-display text-[clamp(2.2rem,5vw,3.8rem)] font-semibold leading-[1.1] text-white">
             Comprehensive dental care, <span className="mb-5 text-shalom-teal">close to you.</span>
           </h1>
           <p className="mb-8 max-w-lg text-[1.05rem] text-white/80">

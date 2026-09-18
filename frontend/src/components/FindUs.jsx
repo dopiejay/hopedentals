@@ -12,8 +12,8 @@ export default function FindUs() {
     <section id="find-us" className="bg-stone px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">Find a branch</p>
-          <h2 className="mb-6 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium">Find a Shalom clinic near you</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Find a branch</p>
+          <h2 className="mb-6 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">Find a Shalom clinic near you</h2>
 
           <ul className="mb-7 flex flex-col gap-4">
             {details.map((d) => {

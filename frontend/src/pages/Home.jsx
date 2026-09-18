@@ -7,7 +7,6 @@ import ServicesPreview from '../components/ServicesPreview';
 import WhyUs from '../components/WhyUs';
 import Branches from '../components/Branches';
 // import TeamPreview from '../components/TeamPreview';
-import Reviews from '../components/Reviews';
 // import FindUs from '../components/FindUs';
 
 export default function Home() {
@@ -28,12 +27,11 @@ export default function Home() {
       <WhyUs />
       <Branches />
       {/* <TreatmentJourney /> */}
-      <Reviews />
 
       {/* CTA Section */}
       <section className="bg-shalom-teal px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-xl">
-          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-medium text-white">
+          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-semibold text-white">
             Your smile deserves dedicated care.
           </h2>
           <p className="mb-8 text-white/80">

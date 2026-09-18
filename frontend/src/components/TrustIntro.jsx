@@ -17,16 +17,16 @@ export default function TrustIntro() {
           {/* Floating badge */}
           <div className="absolute bottom-4 left-4 rounded-2xl bg-white/95 px-5 py-3 shadow-lg backdrop-blur-sm">
             <p className="text-[0.72rem] font-bold tracking-wider text-shalom-navy uppercase">Trusted for</p>
-            <p className="font-display text-2xl font-medium text-ink">20+ Years</p>
+            <p className="font-display text-2xl font-bold text-ink">20+ Years</p>
           </div>
         </div>
 
         {/* Text side */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
             Welcome to Shalom Dental
           </p>
-          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium">
+          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">
             A dental team built around<br />your care.
           </h2>
           <p className="mb-4 text-slate">

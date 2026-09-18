@@ -68,7 +68,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <p className="mb-1 font-display text-2xl font-medium">Good day <SmileIcon size={22} className="inline-block align-[-0.15em]" /></p>
+      <p className="mb-1 font-display text-2xl font-bold">Good day <SmileIcon size={22} className="inline-block align-[-0.15em]" /></p>
       <p className="mb-8 text-slate">Here&apos;s what&apos;s happening at Shalom Dental today.</p>
 
       {error && (
@@ -87,7 +87,7 @@ export default function Dashboard() {
         {/* Today's schedule */}
         <div className="rounded-2xl border border-stone bg-white p-6 shadow-sm">
           <div className="mb-5 flex items-center justify-between">
-            <h2 className="font-display text-lg font-medium">Today&apos;s Schedule</h2>
+            <h2 className="font-display text-lg font-bold">Today&apos;s Schedule</h2>
             <Link to="/admin/appointments" className="text-sm font-bold text-shalom-navy hover:underline">
               View All →
             </Link>
@@ -117,7 +117,7 @@ export default function Dashboard() {
 
         {/* Recent bookings */}
         <div className="rounded-2xl border border-stone bg-white p-6 shadow-sm">
-          <h2 className="mb-5 font-display text-lg font-medium">Recent Bookings</h2>
+          <h2 className="mb-5 font-display text-lg font-bold">Recent Bookings</h2>
           {loading ? (
             <p className="text-sm text-slate">Loading…</p>
           ) : recent.length === 0 ? (
@@ -160,7 +160,7 @@ function StatCard({ label, value, icon, accent = 'bg-stone/50' }) {
   return (
     <div className={`rounded-2xl border border-stone ${accent} p-5`}>
       <div className="mb-3">{icon}</div>
-      <p className="font-display text-2xl font-medium">{value}</p>
+      <p className="font-display text-2xl font-bold">{value}</p>
       <p className="text-[0.8rem] text-slate">{label}</p>
     </div>
   );

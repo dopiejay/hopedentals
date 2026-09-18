@@ -15,7 +15,7 @@ export default function ServiceDetail() {
     return (
       <section className="bg-paper px-6 py-32 text-center">
         <div className="mx-auto max-w-md">
-          <h1 className="mb-3 font-display text-3xl font-medium">Service not found</h1>
+          <h1 className="mb-3 font-display text-3xl font-semibold">Service not found</h1>
           <p className="mb-8 text-slate">
             The service you are looking for doesn&apos;t exist or has moved.
           </p>
@@ -48,7 +48,7 @@ export default function ServiceDetail() {
             </div>
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
               What is this treatment?
             </p>
             <p className="text-slate leading-relaxed">{service.intro}</p>
@@ -67,7 +67,7 @@ export default function ServiceDetail() {
             )}
             {service.whoFor && (
               <div className="mt-8 rounded-3xl border border-stone bg-white p-6">
-                <p className="mb-2 flex items-center gap-2 font-display text-lg font-medium text-ink">
+                <p className="mb-2 flex items-center gap-2 font-display text-lg font-bold text-ink">
                   <HeartHandshakeIcon size={20} className="text-shalom-gold" />
                   Who is it for?
                 </p>
@@ -83,10 +83,10 @@ export default function ServiceDetail() {
         <section className="bg-white px-6 py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.4fr]">
             <div>
-              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">
+              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
                 What to expect
               </p>
-              <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium text-ink">
+              <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold text-ink">
                 A simple, guided process
               </h2>
               <p className="text-slate leading-relaxed">
@@ -100,7 +100,7 @@ export default function ServiceDetail() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="mb-1 font-display text-lg font-medium text-ink">{step.title}</h3>
+                    <h3 className="mb-1 font-display text-lg font-bold text-ink">{step.title}</h3>
                     <p className="text-[0.9rem] text-slate leading-relaxed">{step.desc}</p>
                   </div>
                 </li>

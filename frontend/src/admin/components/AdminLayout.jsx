@@ -22,7 +22,7 @@ export default function AdminLayout() {
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center gap-2 border-b border-white/10 px-6 py-5 font-display text-lg font-medium">
+        <div className="flex items-center gap-2 border-b border-white/10 px-6 py-5 font-display text-lg font-bold">
           <ToothIcon className="text-shalom-gold" size={24} />
           Shalom<em className="not-italic text-shalom-teal">Dental</em>
         </div>
@@ -78,7 +78,7 @@ export default function AdminLayout() {
             <span className="h-0.5 w-5.5 rounded bg-white" />
             <span className="h-0.5 w-5.5 rounded bg-white" />
           </button>
-          <span className="font-display font-medium text-white">Shalom Dental Admin</span>
+          <span className="font-display font-bold text-white">Shalom Dental Admin</span>
         </header>
 
         <main className="p-6 md:p-10">

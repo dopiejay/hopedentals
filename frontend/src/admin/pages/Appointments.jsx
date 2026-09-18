@@ -57,7 +57,7 @@ export default function Appointments() {
     <div>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h1 className="font-display text-2xl font-medium">Appointments</h1>
+          <h1 className="font-display text-2xl font-bold">Appointments</h1>
           <p className="text-slate">Requests submitted through the public site, plus manual bookings.</p>
         </div>
       </div>

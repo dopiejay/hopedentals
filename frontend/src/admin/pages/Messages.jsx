@@ -64,7 +64,7 @@ export default function Messages() {
     <div>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h1 className="font-display text-2xl font-medium">Messages</h1>
+          <h1 className="font-display text-2xl font-bold">Messages</h1>
           <p className="text-slate">
             Inquiries submitted through the contact page.
             {!loading && unreadCount > 0 && (

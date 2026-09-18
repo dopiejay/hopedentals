@@ -34,8 +34,8 @@ export default function WhyUs() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* Left: copy + points */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">Why Shalom</p>
-          <h2 className="mb-4 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-ink">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Why Shalom</p>
+          <h2 className="mb-4 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-ink">
             The trusted choice for <span className="text-shalom-gold">your care</span>.
           </h2>
           <p className="mb-10 max-w-xl text-slate leading-relaxed">
@@ -53,7 +53,7 @@ export default function WhyUs() {
                     <Icon size={22} />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-display text-[1.05rem] font-medium text-ink">{f.title}</h3>
+                    <h3 className="mb-1 font-display text-[1.05rem] font-bold text-ink">{f.title}</h3>
                     <p className="text-[0.88rem] text-slate leading-relaxed">{f.desc}</p>
                   </div>
                 </div>

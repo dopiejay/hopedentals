@@ -67,7 +67,7 @@ export default function BookPage() {
                 <CheckCircleIcon size={36} className="text-shalom-teal" />
               </div>
             </div>
-            <h2 className="mb-3 font-display text-2xl font-medium">Appointment Request Received</h2>
+            <h2 className="mb-3 font-display text-2xl font-semibold">Appointment Request Received</h2>
             <p className="mb-3 text-slate">Thank you, {form.name}! We've received your request for <strong>{form.service}</strong> at the <strong>{form.branch}</strong> branch on <strong>{form.date}</strong>.</p>
             <p className="mb-8 text-slate">We'll contact you shortly to confirm your appointment.</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -105,7 +105,7 @@ export default function BookPage() {
 
           <div className="mb-8 text-center">
             <p className="text-[0.78rem] font-bold tracking-wider text-shalom-gold uppercase">Step {step} of 4</p>
-            <h2 className="mt-1 font-display text-xl font-medium text-ink">
+            <h2 className="mt-1 font-display text-xl font-semibold text-ink">
               {step === 1 && 'Choose a branch'}
               {step === 2 && 'What do you need help with?'}
               {step === 3 && 'When would you like to visit?'}

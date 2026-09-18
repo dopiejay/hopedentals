@@ -12,8 +12,8 @@ export default function TeamPreview() {
   return (
     <section id="team" className="bg-paper px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-navy uppercase">Meet the team</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium">The hands behind your smile</h2>
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Meet the team</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">The hands behind your smile</h2>
       </div>
 
       <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-10 overflow-hidden rounded-3xl border border-stone bg-white md:grid-cols-[280px_1fr]">
@@ -30,7 +30,7 @@ export default function TeamPreview() {
 
         {/* Info */}
         <div className="p-8 text-center md:text-left">
-          <h3 className="mb-1.5 font-display text-2xl font-medium">Shalom Clinical Team</h3>
+          <h3 className="mb-1.5 font-display text-2xl font-bold">Shalom Clinical Team</h3>
           <p className="mb-3.5 text-sm font-bold text-shalom-navy">Dentists · Dental Therapists · Our Branches</p>
           <p className="mb-4.5 text-slate leading-relaxed">
             A dedicated team of dentists and dental therapists delivers care across our Blantyre
@@ -56,7 +56,7 @@ export default function TeamPreview() {
       <div className="mx-auto mt-5 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-3">
         {teamRoles.map((r) => (
           <div key={r.title} className="rounded-3xl border border-stone bg-white p-6 text-center">
-            <h4 className="mb-1 font-display text-base font-medium text-ink">{r.title}</h4>
+            <h4 className="mb-1 font-display text-base font-bold text-ink">{r.title}</h4>
             <p className="text-[0.82rem] text-slate leading-relaxed">{r.desc}</p>
           </div>
         ))}

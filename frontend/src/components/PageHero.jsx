@@ -29,7 +29,7 @@ export default function PageHero({ eyebrow, title, crumb, image }) {
           <span className="text-white/80">{crumb}</span>
         </nav>
         <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">{eyebrow}</p>
-        <h1 className="font-display text-[clamp(1.8rem,4vw,3rem)] font-medium leading-tight text-white">
+        <h1 className="font-display text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-tight text-white">
           {title}
         </h1>
       </div>
