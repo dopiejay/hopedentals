@@ -3,7 +3,7 @@ const aboutImage = 'images/welcome.jpg';
 
 export default function TrustIntro() {
   return (
-    <section className="bg-paper px-6 py-24">
+    <section className="bg-stone px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 md:grid-cols-2">
         {/* Image side */}
         <div className="relative overflow-hidden rounded-3xl">
