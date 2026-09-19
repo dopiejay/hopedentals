@@ -1,11 +1,10 @@
-import { HeartIcon, AwardIcon, GemIcon } from '../components/Icons';
+import { HeartHandshakeIcon, SparklesIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
 const aboutImage = 'images/team.jpg';
 
-const philosophy = [
-  { icon: HeartIcon, title: 'Care', desc: 'Patient comfort and reassurance at the heart of every visit, at every branch.', color: 'bg-shalom-gold/10 text-shalom-gold' },
-  { icon: AwardIcon, title: 'Quality', desc: 'Modern, well-equipped facilities supported by our clinical team and dental laboratory.', color: 'bg-teal-100/60 text-teal-700' },
-  { icon: GemIcon, title: 'Trust', desc: 'A trusted name in Malawian dental care, built up over more than two decades.', color: 'bg-amber-100/60 text-amber-700' },
+const purpose = [
+  { icon: HeartHandshakeIcon, title: 'Our Mission', desc: 'To bring world-class, affordable dental care within easy reach of every Malawian — combining skilled clinicians, modern equipment, and a warm, patient-first approach across all our branches.', color: 'bg-shalom-teal/10 text-shalom-teal', image: 'images/mission.jpg' },
+  { icon: SparklesIcon, title: 'Our Vision', desc: 'To be Malawi\u2019s most trusted dental network — recognised for quality, integrity, and lasting patient relationships, as we expand care into every community we serve.', color: 'bg-shalom-gold/10 text-shalom-gold', image: 'images/vision.jpg' },
 ];
 
 const team = [
@@ -71,24 +70,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="bg-gradient-to-br from-stone to-white px-6 py-24">
+      {/* Mission & Vision */}
+      <section className="bg-shalom-navy px-6 py-24 text-white">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">What guides us</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">Committed to your care</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Our mission &amp; vision</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold text-white">What drives us, every single day</h2>
         </div>
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
-          {philosophy.map((p) => {
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
+          {purpose.map((p) => {
             const Icon = p.icon;
             return (
-              <div key={p.title} className="group rounded-3xl bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-shalom-gold/5">
-                <div className="mb-4 flex justify-center">
-                  <div className={`flex h-16 w-16 items-center justify-center rounded-2xl ${p.color} transition-transform group-hover:scale-110`}>
-                    <Icon size={28} />
-                  </div>
+              <div key={p.title} className="group relative flex flex-col overflow-hidden rounded-3xl border border-stone/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
+                <div className="relative h-60 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
                 </div>
-                <h3 className="mb-2 font-display text-xl font-bold text-ink">{p.title}</h3>
-                <p className="text-[0.92rem] text-slate leading-relaxed">{p.desc}</p>
+                <div className="relative flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 flex items-center gap-2.5 font-display text-[1.15rem] font-bold text-ink">
+                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${p.color}`}>
+                      <Icon size={18} />
+                    </span>
+                    {p.title}
+                  </h3>
+                  <p className="text-[0.92rem] text-slate leading-relaxed">{p.desc}</p>
+                </div>
               </div>
             );
           })}
@@ -96,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="bg-paper px-6 py-24">
+      <section id="team" className="bg-white px-6 py-24">
         <div className="mx-auto mb-14 max-w-xl text-center">
           <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Meet the team</p>
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">The people behind your smile</h2>

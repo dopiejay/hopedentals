@@ -7,6 +7,7 @@ export const branches = [
     area: 'Blantyre, Malawi',
     phone: '+265 99 000 0000',
     note: 'On-site dental laboratory available at this branch.',
+    image: '/images/branch.jpg',
   },
   {
     slug: 'ginnery-corner',
@@ -16,6 +17,7 @@ export const branches = [
     area: 'Blantyre, Malawi',
     phone: '+265 99 000 0000',
     note: 'Orthodontics and general dental care.',
+    image: '/images/branch.jpg',
   },
   {
     slug: 'limbe',
@@ -25,5 +27,6 @@ export const branches = [
     area: 'Limbe, Malawi',
     phone: '+265 99 000 0000',
     note: 'Family and restorative dental care.',
+    image: '/images/branch.jpg',
   },
 ];
