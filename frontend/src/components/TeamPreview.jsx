@@ -12,8 +12,8 @@ export default function TeamPreview() {
   return (
     <section id="team" className="bg-paper px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Meet the team</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">The hands behind your smile</h2>
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Meet the team</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight">The hands behind your smile</h2>
       </div>
 
       <div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-10 overflow-hidden rounded-3xl border border-stone bg-white md:grid-cols-[280px_1fr]">

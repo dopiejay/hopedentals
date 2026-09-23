@@ -44,8 +44,8 @@ export default function Book() {
   return (
     <section id="book" className="bg-white px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Book a visit</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">Three steps to your appointment</h2>
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Book a visit</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight">Three steps to your appointment</h2>
       </div>
 
       <form onSubmit={handleSubmit} className="mx-auto flex max-w-xl flex-col gap-6 rounded-3xl border border-stone bg-paper p-9">

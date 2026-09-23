@@ -31,8 +31,8 @@ export default function Home() {
       <section className="bg-hope-teal px-6 py-20 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1fr_auto]">
           <div>
-            <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-semibold text-white">
-              Your smile deserves dedicated care.
+            <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-semibold leading-tight text-white">
+              Your smile deserves <span className="text-hope-sun">dedicated care</span>.
             </h2>
             <p className="max-w-xl text-white/80">
               Book an appointment at Hope Dental Surgery and take the first step towards a

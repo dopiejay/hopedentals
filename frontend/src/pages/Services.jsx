@@ -29,9 +29,9 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="relative z-10 p-6">
-                  <h3 className="mb-2 font-display text-[1.15rem] font-bold text-ink">{s.title}</h3>
+                  <h3 className="mb-2 font-display text-[1.15rem] font-bold text-hope-accent">{s.title}</h3>
                   <p className="mb-5 flex-1 text-[0.9rem] text-slate leading-relaxed">{s.desc}</p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-hope-navy transition-colors group-hover:text-hope-accent">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-bold text-hope-navy transition-colors group-hover:text-hope-sun">
                     Explore Service <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
                 </div>
@@ -43,7 +43,7 @@ export default function ServicesPage() {
 
       <section className="bg-hope-teal px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-xl">
-          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold">
+          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold leading-tight">
             Not sure which service you need?
           </h2>
           <p className="mb-8 text-white/80">

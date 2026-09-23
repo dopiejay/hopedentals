@@ -1,4 +1,4 @@
-import { SmileIcon, MapPinIcon, LayersIcon } from './Icons';
+import { Link } from 'react-router-dom';
 const aboutImage = 'images/welcome.jpg';
 
 export default function TrustIntro() {
@@ -23,10 +23,10 @@ export default function TrustIntro() {
 
         {/* Text side */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">
             Welcome to Hope Dental Surgery
           </p>
-          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">
+          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight">
             A dental team built around<br />your care.
           </h2>
           <p className="mb-4 text-slate">
@@ -40,25 +40,14 @@ export default function TrustIntro() {
             every visit.
           </p>
 
-          <div className="flex gap-10">
-            <Stat icon={<SmileIcon size={20} className="text-hope-accent" />} value="All" label="Ages Welcome" />
-            <Stat icon={<MapPinIcon size={20} className="text-hope-accent" />} value="01" label="Blantyre Location" />
-            <Stat icon={<LayersIcon size={20} className="text-hope-accent" />} value="6+" label="Dental Services" />
-          </div>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 rounded-full bg-hope-accent px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-hope-navy"
+          >
+            About Us
+          </Link>
         </div>
       </div>
     </section>
-  );
-}
-
-function Stat({ icon, value, label }) {
-  return (
-    <div>
-      <span className="mb-1 flex items-center gap-2">
-        {icon}
-        <strong className="block font-display text-2xl">{value}</strong>
-      </span>
-      <span className="text-[0.78rem] text-slate">{label}</span>
-    </div>
   );
 }

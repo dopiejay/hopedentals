@@ -52,8 +52,8 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-hope-navy/20 to-transparent" />
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">An established practice</p>
-            <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">An established practice</p>
+            <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-tight">
               A trusted name in Malawian dental care
             </h2>
             <p className="mb-4 text-slate leading-relaxed">
@@ -73,8 +73,8 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="bg-hope-navy px-6 py-24 text-white">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-accent uppercase">Our mission &amp; vision</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold text-white">What drives us, every single day</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Our mission &amp; vision</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-tight text-white">What drives us, every single day</h2>
         </div>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
           {purpose.map((p) => {
@@ -108,8 +108,8 @@ export default function AboutPage() {
       {/* Team Section */}
       <section id="team" className="bg-white px-6 py-24">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Meet the team</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">The people behind your smile</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Meet the team</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-tight">The people behind your smile</h2>
         </div>
 
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

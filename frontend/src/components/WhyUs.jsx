@@ -6,39 +6,39 @@ const features = [
     icon: SmileIcon,
     title: 'Patient-Centred Care',
     desc: 'Comfort and reassurance at every visit.',
-    color: 'bg-hope-accent/10 text-hope-accent',
+    color: 'bg-white/15 text-white',
   },
   {
     icon: ShieldIcon,
     title: 'Modern Facilities',
     desc: 'A well-equipped clinic at Chichiri Shopping Centre.',
-    color: 'bg-teal-100/60 text-teal-700',
+    color: 'bg-white/15 text-white',
   },
   {
     icon: AwardIcon,
     title: 'Experienced Team',
     desc: 'Dentists and therapists you can trust.',
-    color: 'bg-amber-100/60 text-amber-700',
+    color: 'bg-white/15 text-white',
   },
   {
     icon: LayersIcon,
     title: 'Comprehensive Services',
     desc: 'Preventive to restorative care, all in one place.',
-    color: 'bg-blue-100/60 text-blue-700',
+    color: 'bg-white/15 text-white',
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="bg-stone px-6 py-24">
+    <section className="bg-hope-teal px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* Left: copy + points */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Why Hope</p>
-          <h2 className="mb-4 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold text-ink">
-            The trusted choice for <span className="text-hope-accent">your care</span>.
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Why Hope</p>
+          <h2 className="mb-4 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight text-white">
+            The trusted choice for <span className="text-hope-sun">your care</span>.
           </h2>
-          <p className="mb-10 max-w-xl text-slate leading-relaxed">
+          <p className="mb-10 max-w-xl text-white/80 leading-relaxed">
             Hope Dental Surgery is an established dental practice at Chichiri Shopping Centre,
             offering dental treatments, tooth replacement, and orthodontic care from an
             experienced clinical team that puts patient comfort first.
@@ -53,8 +53,8 @@ export default function WhyUs() {
                     <Icon size={22} />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-display text-[1.05rem] font-bold text-ink">{f.title}</h3>
-                    <p className="text-[0.88rem] text-slate leading-relaxed">{f.desc}</p>
+                    <h3 className="mb-1 font-display text-[1.05rem] font-bold text-white">{f.title}</h3>
+                    <p className="text-[0.88rem] text-white/70 leading-relaxed">{f.desc}</p>
                   </div>
                 </div>
               );
@@ -63,10 +63,10 @@ export default function WhyUs() {
 
           <div className="mt-10">
             <Link
-              to="/about"
-              className="inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-hope-navy"
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-hope-accent px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-hope-navy"
             >
-              About Us
+              Contact Us
             </Link>
           </div>
         </div>

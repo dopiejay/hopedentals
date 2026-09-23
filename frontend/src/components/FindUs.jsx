@@ -9,11 +9,11 @@ const details = [
 
 export default function FindUs() {
   return (
-    <section id="find-us" className="bg-stone px-6 py-24">
+    <section id="find-us" className="bg-white px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Find the clinic</p>
-          <h2 className="mb-6 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">Visit us at Chichiri Shopping Centre</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Find the clinic</p>
+          <h2 className="mb-6 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-tight">Visit us at Chichiri Shopping Centre</h2>
 
           <ul className="mb-7 flex flex-col gap-4">
             {details.map((d) => {

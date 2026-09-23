@@ -9,7 +9,7 @@ export default function Branches() {
         <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
           Find a Branch
         </p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight">
           Choose your nearest <span className="text-hope-accent">Shalom</span> clinic.
         </h2>
         <p className="mt-4 text-slate">

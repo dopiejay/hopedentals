@@ -62,8 +62,8 @@ export default function ContactPage() {
       {/* Clinic card */}
       <section className="bg-white px-6 py-20">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Our location</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold">One clinic, close to you</h2>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Our location</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-semibold leading-tight">One clinic, close to you</h2>
         </div>
         <div className="mx-auto grid max-w-3xl grid-cols-1 gap-6">
           {branches.map((b) => (

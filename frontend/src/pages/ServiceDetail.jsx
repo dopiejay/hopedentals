@@ -48,7 +48,7 @@ export default function ServiceDetail() {
             </div>
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">
               What is this treatment?
             </p>
             <p className="text-slate leading-relaxed">{service.intro}</p>
@@ -83,10 +83,10 @@ export default function ServiceDetail() {
         <section className="bg-white px-6 py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.4fr]">
             <div>
-              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
+              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">
                 What to expect
               </p>
-              <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold text-ink">
+              <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold leading-tight text-ink">
                 A simple, guided process
               </h2>
               <p className="text-slate leading-relaxed">
@@ -111,10 +111,10 @@ export default function ServiceDetail() {
       )}
 
       {/* Back to all services */}
-      <div className="bg-paper px-6 pb-16 pt-10 text-center">
+      <div className="bg-hope-teal px-6 pb-16 pt-10 text-center">
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 text-sm font-bold text-hope-navy transition-colors hover:text-hope-accent"
+          className="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-hope-sun"
         >
           <ArrowRightIcon size={16} className="rotate-180" />
           Explore All Services

@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-6xl px-6 pt-28 pb-20 md:flex md:min-h-[600px] md:items-center md:py-24 lg:min-h-[700px]">
         {/* Left: Copy */}
         <div className="relative z-10 max-w-xl">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-accent uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">
             Dental care at Chichiri, Blantyre
           </p>
           <h1 className="mb-5 font-display text-[clamp(2.2rem,5vw,3.8rem)] font-semibold leading-[1.1] text-white">
