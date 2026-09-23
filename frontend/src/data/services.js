@@ -4,7 +4,7 @@ import {
   GemIcon,
   ShieldIcon,
   TreatIcon,
-  WrenchIcon,
+  BabyIcon,
 } from '../components/Icons';
 
 export const services = [
@@ -13,11 +13,11 @@ export const services = [
     icon: StethoscopeIcon,
     title: 'General Dentistry',
     desc: 'Routine dental care and preventive treatment — consultations, examinations, cleanings, fillings, and gum care.',
-    color: 'from-shalom-teal/20 to-shalom-gold/10',
-    iconColor: 'text-shalom-navy bg-shalom-teal/10',
+    color: 'from-hope-teal/20 to-hope-accent/10',
+    iconColor: 'text-hope-navy bg-hope-teal/10',
     img: '/images/general.jpg',
     intro:
-      'General dentistry focuses on the prevention, diagnosis, and treatment of common dental conditions. Regular visits keep your teeth and gums healthy across every branch, catching small problems before they grow into bigger, more expensive ones.',
+      'General dentistry focuses on the prevention, diagnosis, and treatment of common dental conditions. Regular visits keep your teeth and gums healthy, catching small problems before they grow into bigger, more expensive ones.',
     includes: [
       { title: 'Dental Consultation', desc: 'A relaxed first conversation about your concerns and goals.' },
       { title: 'Routine Examinations', desc: 'A full look at your teeth, gums, and oral health.' },
@@ -34,9 +34,9 @@ export const services = [
       { title: 'Care & Follow-Up', desc: 'Treatment is provided gently, with follow-up where needed.' },
     ],
     whyUs: [
-      { title: 'Patient-Centred', desc: 'Comfortable, reassuring care at every branch.' },
+      { title: 'Patient-Centred', desc: 'Comfortable, reassuring care at our Chichiri clinic.' },
       { title: 'Experienced Team', desc: 'Dentists and dental therapists dedicated to your care.' },
-      { title: 'Convenient Locations', desc: 'Across Blantyre, Ginnery Corner, and Limbe.' },
+      { title: 'Convenient Location', desc: 'Chichiri Shopping Centre, Blantyre.' },
     ],
     faqs: [
       {
@@ -62,7 +62,7 @@ export const services = [
     iconColor: 'text-blue-700 bg-blue-100/60',
     img: '/images/orthodontics.jpg',
     intro:
-      'Orthodontics straightens teeth and improves how your upper and lower teeth meet. Treatment at Shalom uses traditional braces and careful follow-up, planned visit by visit for patients of all ages.',
+      'Orthodontics straightens teeth and improves how your upper and lower teeth meet. Treatment at Hope Dental Surgery uses traditional braces and careful follow-up, planned visit by visit for patients of all ages.',
     includes: [
       { title: 'Orthodontic Consultation', desc: 'A discussion of your concerns and what you would like to achieve.' },
       { title: 'Traditional Braces', desc: 'Reliable, precise correction for a wide range of alignment issues.' },
@@ -108,7 +108,7 @@ export const services = [
     iconColor: 'text-purple-700 bg-purple-100/60',
     img: '/images/crowns-bridges.jpg',
     intro:
-      'Restorative dentistry repairs and replaces teeth that are damaged or missing, restoring both function and appearance. Working alongside our dental laboratory, the team crafts crowns, bridges, and dentures shaped to match your natural bite and shade.',
+      'Restorative dentistry repairs and replaces teeth that are damaged or missing, restoring both function and appearance. The team crafts crowns, bridges, and dentures shaped to match your natural bite and shade.',
     includes: [
       { title: 'Crowns', desc: 'Caps that restore and protect damaged or heavily filled teeth.' },
       { title: 'Bridges', desc: 'A fixed solution to replace one or more missing teeth.' },
@@ -124,7 +124,7 @@ export const services = [
       { title: 'Fitting & Review', desc: 'Your restoration is fitted, adjusted, and reviewed.' },
     ],
     whyUs: [
-      { title: 'On-Site Laboratory', desc: 'Quality restorations crafted in partnership with our lab.' },
+      { title: 'Crafted Restorations', desc: 'Restorations shaped to match your natural smile.' },
       { title: 'Natural Results', desc: 'Shades and shapes matched to your smile.' },
       { title: 'Durable Materials', desc: 'Restorations built to last.' },
     ],
@@ -206,36 +206,41 @@ export const services = [
     ],
   },
   {
-    slug: 'dental-laboratory',
-    icon: WrenchIcon,
-    title: 'Dental Laboratory',
-    desc: 'On-site laboratory services crafting crowns, bridges, dentures, and prosthetics in close step with your clinical care.',
+    slug: 'childrens-dentistry',
+    icon: BabyIcon,
+    title: "Children's Dentistry",
+    desc: 'Gentle, patient dental care designed to make children feel safe and comfortable at every visit.',
     color: 'from-teal-100/60 to-cyan-50/40',
     iconColor: 'text-teal-700 bg-teal-100/60',
-    img: '/images/crowns-bridges.jpg',
+    img: '/images/child.jpg',
     intro:
-      'Shalom&apos;s dental laboratory works hand-in-hand with our clinical team to craft crowns, bridges, dentures, and prosthetics. Bringing laboratory and clinical care together means precise, well-fitting restorations planned around your treatment.',
+      "Children's dentistry focuses on keeping young smiles healthy from the very first tooth. We create relaxed, friendly visits that help children feel at ease, while building good oral-health habits that last a lifetime.",
     includes: [
-      { title: 'Crowns & Bridges', desc: 'Restorations crafted to a precise fit.' },
-      { title: 'Dentures & Prosthetics', desc: 'Custom-made replacements for missing teeth.' },
-      { title: 'Repairs', desc: 'Care and repair of existing dental appliances.' },
+      { title: 'Children\u2019s Examinations', desc: 'Age-appropriate check-ups of teeth and gums.' },
+      { title: 'Preventive Care', desc: 'Cleanings and fluoride care for growing teeth.' },
+      { title: 'Gentle Treatment', desc: 'Fillings and care delivered with patience and reassurance.' },
+      { title: 'Habits & Guidance', desc: 'Advice on brushing, diet, and early alignment.' },
     ],
     whoFor:
-      'Patients whose restorative treatment — such as crowns, bridges, or dentures — needs a precisely crafted, custom-fit restoration produced in-house.',
+      'Children\u2019s dentistry suits infants, toddlers, and school-age children building healthy dental habits, as well as parents who want a team their children can grow to trust.',
     steps: [
-      { title: 'Clinical Planning', desc: 'Your clinician plans the restoration you need.' },
-      { title: 'Impressions', desc: 'Accurate impressions are taken of your teeth.' },
-      { title: 'Laboratory Crafting', desc: 'Your restoration is made to fit precisely.' },
-      { title: 'Fitting', desc: 'The finished restoration is tried in and adjusted.' },
+      { title: 'Welcome Visit', desc: 'A friendly first visit focused on feeling comfortable.' },
+      { title: 'Examination', desc: 'A gentle look at teeth, gums, and development.' },
+      { title: 'Preventive Care', desc: 'Cleaning and protection for growing teeth.' },
+      { title: 'Guidance', desc: 'Simple advice for parents and children at home.' },
     ],
     whyUs: [
-      { title: 'Clinical + Lab Together', desc: 'Seamless coordination between treatment and restoration.' },
-      { title: 'Precise Fit', desc: 'Restorations crafted carefully in-house.' },
+      { title: 'Patient with Kids', desc: 'Calm, reassuring visits designed for children.' },
+      { title: 'Whole Family Care', desc: 'One clinic your whole family can visit.' },
     ],
     faqs: [
       {
-        q: 'What is a dental laboratory?',
-        a: 'It is where braces-adjacent restorations such as crowns, bridges, and dentures are designed and crafted before they are fitted by your dentist.',
+        q: 'When should a child first see a dentist?',
+        a: 'An early visit is a great idea once the first teeth appear or around the first birthday. It builds familiarity long before any treatment is needed.',
+      },
+      {
+        q: 'How do you help anxious children?',
+        a: 'We take time to explain and keep visits relaxed and gentle, letting children move at their own pace so they feel in control.',
       },
     ],
   },

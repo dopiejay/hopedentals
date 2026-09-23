@@ -6,11 +6,11 @@ export default function Branches() {
   return (
     <section id="branches" className="bg-white px-6 py-24">
       <div className="mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
           Find a Branch
         </p>
         <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">
-          Choose your nearest <span className="text-shalom-gold">Shalom</span> clinic.
+          Choose your nearest <span className="text-hope-accent">Shalom</span> clinic.
         </h2>
         <p className="mt-4 text-slate">
           Three branches across Blantyre and Limbe bring comprehensive dental care closer to you.
@@ -26,7 +26,7 @@ export default function Branches() {
             <h3 className="mb-5 font-display text-xl font-bold text-ink">{b.name}</h3>
             <Link
               to="/contact"
-              className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-shalom-teal transition-colors group-hover:text-shalom-navy"
+              className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-hope-teal transition-colors group-hover:text-hope-navy"
             >
               View Branch <ArrowRightIcon size={15} className="transition-transform group-hover:translate-x-1" />
             </Link>
@@ -37,7 +37,7 @@ export default function Branches() {
       <div className="mt-12 text-center">
         <Link
           to="/book"
-          className="inline-flex items-center gap-2 rounded-full bg-shalom-navy px-8 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-shalom-teal"
+          className="inline-flex items-center gap-2 rounded-full bg-hope-navy px-8 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-hope-teal"
         >
           Book at a Branch
         </Link>

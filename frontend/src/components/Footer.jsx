@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { PhoneIcon, MailIcon, MapPinIcon, MessageCircleIcon } from './Icons';
+import { PhoneIcon, MapPinIcon, MessageCircleIcon } from './Icons';
 import Wordmark from './Wordmark';
 
 const navLinks = [
@@ -20,24 +20,24 @@ export default function Footer() {
               <Wordmark light />
             </div>
             <p className="mb-6 max-w-xs text-[0.9rem] text-white/60">
-              An established dental organisation serving Blantyre and Limbe for over 20 years —
-              general, orthodontic, restorative, and preventive dental care from our multiple
-              branches and on-site dental laboratory.
+              An established private dental practice at Chichiri Shopping Centre, Blantyre —
+              dental treatments, tooth replacement, and orthodontic care from one dedicated
+              clinical team.
             </p>
             <div className="flex flex-col gap-2.5 text-[0.85rem] text-white/60">
               <span className="flex items-start gap-2">
-                <MapPinIcon size={14} className="mt-0.5 shrink-0 text-shalom-gold" />
+                <MapPinIcon size={14} className="mt-0.5 shrink-0 text-hope-accent" />
                 <span>
-                  Blantyre &middot; Ginnery Corner &middot; Limbe
+                  Chichiri Shopping Centre &middot; Blantyre
                 </span>
               </span>
-              <a href="tel:+265998951880" className="flex items-center gap-2 transition-colors hover:text-white">
-                <PhoneIcon size={14} className="text-shalom-gold" />
-                +265 998 95 18 80
+              <a href="tel:+2651876966" className="flex items-center gap-2 transition-colors hover:text-white">
+                <PhoneIcon size={14} className="text-hope-accent" />
+                +265 1 876 966
               </a>
-              <a href="mailto:shalomdentalservices@yahoo.com" className="flex items-center gap-2 transition-colors hover:text-white">
-                <MailIcon size={14} className="text-shalom-gold" />
-                shalomdentalservices@yahoo.com
+              <a href="tel:+265883449299" className="flex items-center gap-2 transition-colors hover:text-white">
+                <PhoneIcon size={14} className="text-hope-accent" />
+                +265 883 449 299
               </a>
             </div>
           </div>
@@ -63,23 +63,23 @@ export default function Footer() {
             </h4>
             <div className="mb-6 flex flex-col gap-2 text-[0.9rem] text-white/60">
               <div className="flex justify-between">
-                <span>Monday – Friday</span>
-                <span className="font-medium text-white">9:00 – 16:00</span>
+                <span>Monday – Thursday</span>
+                <span className="font-medium text-white">08:00 – 16:30</span>
               </div>
               <div className="flex justify-between">
-                <span>Saturday</span>
-                <span className="font-medium text-white">9:00 – 12:00</span>
+                <span>Friday</span>
+                <span className="font-medium text-white">08:00 – 11:00</span>
               </div>
               <div className="flex justify-between">
-                <span>Sunday</span>
+                <span>Saturday – Sunday</span>
                 <span className="font-medium text-white/40">Closed</span>
               </div>
             </div>
             <a
-              href="https://wa.me/265998951880"
+              href="https://wa.me/265883449299"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-shalom-teal px-5 py-2.5 text-sm font-bold text-ink transition-all hover:-translate-y-px"
+              className="inline-flex items-center gap-2 rounded-full bg-hope-teal px-5 py-2.5 text-sm font-bold text-white transition-all hover:-translate-y-px"
             >
               <MessageCircleIcon size={15} />
               Chat on WhatsApp
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-[0.78rem] text-white/40">
-          <p>&copy; {new Date().getFullYear()} Shalom Dental Services Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Hope Dental Surgery. All rights reserved.</p>
         </div>
       </div>
     </footer>

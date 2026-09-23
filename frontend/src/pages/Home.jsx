@@ -5,9 +5,8 @@ import Hero from '../components/Hero';
 import TrustIntro from '../components/TrustIntro';
 import ServicesPreview from '../components/ServicesPreview';
 import WhyUs from '../components/WhyUs';
-import Branches from '../components/Branches';
+import FindUs from '../components/FindUs';
 // import TeamPreview from '../components/TeamPreview';
-// import FindUs from '../components/FindUs';
 
 export default function Home() {
   const { hash } = useLocation();
@@ -25,30 +24,31 @@ export default function Home() {
       <TrustIntro />
       <ServicesPreview />
       <WhyUs />
-      <Branches />
+      <FindUs />
       {/* <TreatmentJourney /> */}
 
       {/* CTA Section */}
-      <section className="bg-shalom-teal px-6 py-20 text-white">
+      <section className="bg-hope-teal px-6 py-20 text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1fr_auto]">
           <div>
             <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-semibold text-white">
               Your smile deserves dedicated care.
             </h2>
             <p className="max-w-xl text-white/80">
-              Book an appointment at the branch closest to you and take the first step towards a healthier, more confident smile.
+              Book an appointment at Hope Dental Surgery and take the first step towards a
+              healthier, more confident smile.
             </p>
           </div>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:justify-end lg:flex-col">
             <Link
               to="/book"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-shalom-navy transition-all hover:-translate-y-px hover:bg-white/90"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-hope-navy transition-all hover:-translate-y-px hover:bg-white/90"
             >
               <CalendarIcon size={18} />
               Book Your Appointment
             </Link>
             <a
-              href="https://wa.me/265998951880"
+              href="https://wa.me/265883449299"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-white/40 px-8 py-4 text-base font-bold text-white transition-all hover:bg-white/10"

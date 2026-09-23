@@ -21,7 +21,7 @@ export default function ServiceDetail() {
           </p>
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 rounded-full bg-shalom-teal px-8 py-4 text-sm font-bold text-ink transition-all hover:-translate-y-0.5 hover:bg-white hover:text-shalom-navy"
+            className="inline-flex items-center gap-2 rounded-full bg-hope-teal px-8 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-hope-navy"
           >
             View All Services
           </Link>
@@ -48,7 +48,7 @@ export default function ServiceDetail() {
             </div>
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
               What is this treatment?
             </p>
             <p className="text-slate leading-relaxed">{service.intro}</p>
@@ -59,7 +59,7 @@ export default function ServiceDetail() {
                     key={item.title}
                     className="inline-flex items-center gap-1.5 rounded-full border border-stone bg-white px-4 py-2 text-[0.85rem] font-semibold text-ink"
                   >
-                    <CheckCircleIcon size={15} className="text-shalom-gold" />
+                    <CheckCircleIcon size={15} className="text-hope-accent" />
                     {item.title}
                   </span>
                 ))}
@@ -68,7 +68,7 @@ export default function ServiceDetail() {
             {service.whoFor && (
               <div className="mt-8 rounded-3xl border border-stone bg-white p-6">
                 <p className="mb-2 flex items-center gap-2 font-display text-lg font-bold text-ink">
-                  <HeartHandshakeIcon size={20} className="text-shalom-gold" />
+                  <HeartHandshakeIcon size={20} className="text-hope-accent" />
                   Who is it for?
                 </p>
                 <p className="text-[0.92rem] text-slate leading-relaxed">{service.whoFor}</p>
@@ -83,7 +83,7 @@ export default function ServiceDetail() {
         <section className="bg-white px-6 py-24">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.4fr]">
             <div>
-              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">
+              <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
                 What to expect
               </p>
               <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-semibold text-ink">
@@ -96,7 +96,7 @@ export default function ServiceDetail() {
             <ol className="divide-y divide-stone border-y border-stone">
               {service.steps.map((step, i) => (
                 <li key={step.title} className="flex items-start gap-5 py-6">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-shalom-gold/15 font-display text-lg font-bold text-shalom-navy">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-hope-accent/15 font-display text-lg font-bold text-hope-navy">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div>
@@ -114,7 +114,7 @@ export default function ServiceDetail() {
       <div className="bg-paper px-6 pb-16 pt-10 text-center">
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 text-sm font-bold text-shalom-navy transition-colors hover:text-shalom-gold"
+          className="inline-flex items-center gap-2 text-sm font-bold text-hope-navy transition-colors hover:text-hope-accent"
         >
           <ArrowRightIcon size={16} className="rotate-180" />
           Explore All Services

@@ -12,7 +12,7 @@ export default function TeamPreview() {
   return (
     <section id="team" className="bg-paper px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-shalom-teal uppercase">Meet the team</p>
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">Meet the team</p>
         <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold">The hands behind your smile</h2>
       </div>
 
@@ -31,7 +31,7 @@ export default function TeamPreview() {
         {/* Info */}
         <div className="p-8 text-center md:text-left">
           <h3 className="mb-1.5 font-display text-2xl font-bold">Shalom Clinical Team</h3>
-          <p className="mb-3.5 text-sm font-bold text-shalom-navy">Dentists · Dental Therapists · Our Branches</p>
+          <p className="mb-3.5 text-sm font-bold text-hope-navy">Dentists · Dental Therapists · Our Branches</p>
           <p className="mb-4.5 text-slate leading-relaxed">
             A dedicated team of dentists and dental therapists delivers care across our Blantyre
             and Limbe branches — offering general, orthodontic, and restorative treatment with
@@ -46,7 +46,7 @@ export default function TeamPreview() {
           </div>
           <Link
             to="/about"
-            className="inline-flex items-center gap-2 font-bold text-shalom-navy transition-colors hover:text-shalom-gold"
+            className="inline-flex items-center gap-2 font-bold text-hope-navy transition-colors hover:text-hope-accent"
           >
             Meet the full team <ArrowRightIcon size={16} />
           </Link>

@@ -77,10 +77,10 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard label="Today's Appointments" value={loading ? '—' : stats.today} icon={<CalendarIcon size={22} className="text-shalom-gold" />} accent="bg-shalom-gold/10" />
+        <StatCard label="Today's Appointments" value={loading ? '—' : stats.today} icon={<CalendarIcon size={22} className="text-hope-accent" />} accent="bg-hope-accent/10" />
         <StatCard label="Pending Requests" value={loading ? '—' : stats.pending} icon={<ClockIcon size={22} className="text-amber-500" />} accent="bg-amber-50" />
         <StatCard label="This Week" value={loading ? '—' : stats.week} icon={<LayersIcon size={22} className="text-blue-500" />} accent="bg-blue-50" />
-        <StatCard label="Total Bookings" value={loading ? '—' : stats.total} icon={<PlanIcon size={22} className="text-shalom-navy" />} accent="bg-shalom-teal/10" />
+        <StatCard label="Total Bookings" value={loading ? '—' : stats.total} icon={<PlanIcon size={22} className="text-hope-navy" />} accent="bg-hope-teal/10" />
       </div>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_1fr]">
@@ -88,7 +88,7 @@ export default function Dashboard() {
         <div className="rounded-2xl border border-stone bg-white p-6 shadow-sm">
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-lg font-bold">Today&apos;s Schedule</h2>
-            <Link to="/admin/appointments" className="text-sm font-bold text-shalom-navy hover:underline">
+            <Link to="/admin/appointments" className="text-sm font-bold text-hope-navy hover:underline">
               View All →
             </Link>
           </div>
@@ -100,9 +100,9 @@ export default function Dashboard() {
           ) : (
             <ul className="flex flex-col gap-3">
               {todaysSchedule.map((a) => (
-                <li key={a.id} className="flex items-center justify-between rounded-xl bg-shalom-teal/5 px-4 py-3">
+                <li key={a.id} className="flex items-center justify-between rounded-xl bg-hope-teal/5 px-4 py-3">
                   <div>
-                    <p className="text-[0.8rem] font-bold text-shalom-gold">{a.preferred_time}</p>
+                    <p className="text-[0.8rem] font-bold text-hope-accent">{a.preferred_time}</p>
                     <p className="font-semibold">{a.patient_name}</p>
                     <p className="text-[0.85rem] text-slate">{a.service_name}</p>
                   </div>

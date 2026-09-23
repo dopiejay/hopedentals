@@ -68,7 +68,7 @@ export default function Appointments() {
             key={f.key}
             onClick={() => setFilter(f.key)}
             className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-              filter === f.key ? 'bg-shalom-navy text-white' : 'bg-white text-ink hover:bg-stone'
+              filter === f.key ? 'bg-hope-navy text-white' : 'bg-white text-ink hover:bg-stone'
             }`}
           >
             {f.label}
@@ -88,7 +88,7 @@ export default function Appointments() {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="bg-shalom-teal/5">
+              <thead className="bg-hope-teal/5">
                 <tr className="text-[0.72rem] text-slate uppercase">
                   <th className="px-5 py-3 font-semibold">Patient</th>
                   <th className="px-5 py-3 font-semibold">Service</th>
@@ -121,7 +121,7 @@ export default function Appointments() {
                         disabled={updatingId === a.id}
                         value={a.status}
                         onChange={(e) => handleStatusChange(a.id, e.target.value)}
-                        className="rounded-lg border-[1.5px] border-stone px-2.5 py-1.5 text-sm focus:border-shalom-gold focus:outline-none disabled:opacity-50"
+                        className="rounded-lg border-[1.5px] border-stone px-2.5 py-1.5 text-sm focus:border-hope-accent focus:outline-none disabled:opacity-50"
                       >
                         <option value="pending">Pending</option>
                         <option value="confirmed">Confirm</option>

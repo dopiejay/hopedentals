@@ -7,7 +7,7 @@ const links = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About Us' },
   { to: '/services', label: 'Services' },
-  { to: '/contact', label: 'Branches' },
+  { to: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
               key={l.to}
               to={l.to}
               className={`transition-colors ${
-                isActive(l.to) ? 'text-shalom-navy' : 'opacity-75 text-ink hover:opacity-100'
+                isActive(l.to) ? 'text-hope-navy' : 'opacity-75 text-ink hover:opacity-100'
               }`}
             >
               {l.label}
@@ -43,7 +43,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-2.5 md:flex">
           <a
-            href="https://wa.me/265998951880"
+            href="https://wa.me/265883449299"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full bg-stone px-5 py-3 text-sm font-bold text-ink transition-colors hover:bg-[#e2e4dd]"
@@ -53,7 +53,7 @@ export default function Navbar() {
           </a>
           <Link
             to="/book"
-            className="rounded-full bg-ink px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-shalom-navy"
+            className="rounded-full bg-ink px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-hope-navy"
           >
             Book Appointment
           </Link>
@@ -75,14 +75,14 @@ export default function Navbar() {
             <Link
               key={l.to}
               to={l.to}
-              className={`font-semibold ${isActive(l.to) ? 'text-shalom-navy' : ''}`}
+              className={`font-semibold ${isActive(l.to) ? 'text-hope-navy' : ''}`}
               onClick={() => setOpen(false)}
             >
               {l.label}
             </Link>
           ))}
           <a
-            href="https://wa.me/265998951880"
+            href="https://wa.me/265883449299"
             className="flex items-center justify-center gap-2 rounded-full bg-stone px-5 py-3 text-sm font-bold"
           >
             <MessageCircleIcon size={15} />

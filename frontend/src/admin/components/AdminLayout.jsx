@@ -23,12 +23,12 @@ export default function AdminLayout() {
         }`}
       >
         <div className="flex items-center gap-2 border-b border-white/10 px-6 py-5 font-display text-lg font-bold">
-          <ToothIcon className="text-shalom-gold" size={24} />
-          Shalom<em className="not-italic text-shalom-teal">Dental</em>
+          <ToothIcon className="text-hope-accent" size={24} />
+          Hope<em className="not-italic text-hope-teal">Dental</em>
         </div>
 
         <nav className="flex-1 space-y-1 px-3 py-5">
-          <p className="px-3 pb-2 text-[0.7rem] font-bold tracking-[0.1em] text-white/40 uppercase">Branches</p>
+          <p className="px-3 pb-2 text-[0.7rem] font-bold tracking-[0.1em] text-white/40 uppercase">Main</p>
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -37,7 +37,7 @@ export default function AdminLayout() {
               onClick={() => setSidebarOpen(false)}
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors ${
-                  isActive ? 'bg-shalom-navy text-white' : 'text-white/70 hover:bg-white/10 hover:text-white'
+                  isActive ? 'bg-hope-navy text-white' : 'text-white/70 hover:bg-white/10 hover:text-white'
                 }`
               }
             >
@@ -78,7 +78,7 @@ export default function AdminLayout() {
             <span className="h-0.5 w-5.5 rounded bg-white" />
             <span className="h-0.5 w-5.5 rounded bg-white" />
           </button>
-          <span className="font-display font-bold text-white">Shalom Dental Admin</span>
+          <span className="font-display font-bold text-white">Hope Dental Admin</span>
         </header>
 
         <main className="p-6 md:p-10">
