@@ -96,20 +96,19 @@ router.patch('/:id', requireAdmin, async (req, res) => {
   }
 });
 
-// DELETE /api/services/:id — admin, hide a service (soft delete keeps booking history valid)
+// DELETE /api/services/:id — admin, permanently delete a service.
+// Booking history is preserved by detaching the service reference first.
 router.delete('/:id', requireAdmin, async (req, res) => {
   try {
-    const result = await query(
-      'UPDATE services SET is_active = false WHERE id = $1 RETURNING id, is_active',
-      [req.params.id]
-    );
+    await query('UPDATE appointments SET service_id = NULL WHERE service_id = $1', [req.params.id]);
+    const result = await query('DELETE FROM services WHERE id = $1 RETURNING id', [req.params.id]);
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'Service not found.' });
     }
     res.json(result.rows[0]);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Could not remove service.' });
+    res.status(500).json({ error: 'Could not delete service.' });
   }
 });
 
