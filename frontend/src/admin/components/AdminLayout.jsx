@@ -19,7 +19,7 @@ export default function AdminLayout() {
     <div className="flex min-h-screen bg-paper">
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col bg-ink text-white transition-transform md:static md:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-64 flex-col bg-ink text-white transition-transform md:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -68,7 +68,7 @@ export default function AdminLayout() {
       )}
 
       {/* Main content */}
-      <div className="flex-1 md:pl-0">
+      <div className="flex-1 md:pl-64">
         <header className="sticky top-0 z-20 flex items-center gap-4 border-b border-stone bg-ink px-5 py-3.5 backdrop-blur md:hidden">
           <button
             aria-label="Open menu"
