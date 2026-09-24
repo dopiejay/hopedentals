@@ -34,7 +34,7 @@ export default function Login() {
       <div className="relative hidden flex-col justify-between bg-ink p-12 text-white md:flex">
         <div className="flex items-center gap-2 font-display text-xl font-bold">
           <ToothIcon className="text-hope-accent" size={26} />
-          Hope<em className="not-italic text-hope-teal">Dental</em>
+          Hope<em className="not-italic text-hope-teal">Dentals</em>
         </div>
 
         <div>
@@ -48,7 +48,7 @@ export default function Login() {
           </p>
         </div>
 
-        <p className="text-sm text-white/40">Hope Dental Surgery Admin Portal — internal use only</p>
+        <p className="text-sm text-white/40">HopeDentals Admin Portal — internal use only</p>
       </div>
 
       {/* Right panel */}
@@ -56,11 +56,11 @@ export default function Login() {
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 flex items-center gap-2 font-display text-xl font-bold md:hidden">
             <ToothIcon className="text-hope-accent" size={24} />
-            Hope<em className="not-italic text-hope-teal">Dental</em>
+            Hope<em className="not-italic text-hope-teal">Dentals</em>
           </div>
 
           <h1 className="mb-1 font-display text-2xl font-bold">Sign in</h1>
-          <p className="mb-8 text-sm text-slate">Access the Hope Dental Surgery admin portal.</p>
+          <p className="mb-8 text-sm text-slate">Access the HopeDentals admin portal.</p>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div>
@@ -74,7 +74,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full rounded-lg border-[1.5px] border-stone px-3.5 py-3 focus:border-hope-accent focus:outline-none"
-                placeholder="you@shalomdentalservices.com"
+                placeholder="you@hopedentals.com"
               />
             </div>
 

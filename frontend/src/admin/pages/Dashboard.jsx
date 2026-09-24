@@ -69,7 +69,7 @@ export default function Dashboard() {
   return (
     <div>
       <p className="mb-1 font-display text-2xl font-bold">Good day <SmileIcon size={22} className="inline-block align-[-0.15em]" /></p>
-      <p className="mb-8 text-slate">Here&apos;s what&apos;s happening at Shalom Dental today.</p>
+      <p className="mb-8 text-slate">Here&apos;s what&apos;s happening at HopeDentals today.</p>
 
       {error && (
         <p className="mb-6 rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{error}</p>

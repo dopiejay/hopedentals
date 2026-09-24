@@ -2,22 +2,25 @@ import { useState } from 'react';
 import { MapPinIcon, PhoneIcon, MailIcon, ClockIcon, MessageCircleIcon, SendIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
 import { branches } from '../data/branches';
+import useSettings from '../hooks/useSettings';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
-const contactCards = [
-  { icon: PhoneIcon, title: 'Call Us', value: '+265 1 876 966', action: 'tel:+2651876966', color: 'bg-teal-100/60 text-teal-700' },
-  { icon: MessageCircleIcon, title: 'WhatsApp', value: '+265 883 449 299', action: 'https://wa.me/265883449299', color: 'bg-green-100/60 text-green-600' },
-  { icon: MailIcon, title: 'Postal Address', value: 'P.O. Box 31574, Blantyre 3', color: 'bg-blue-100/60 text-blue-600' },
-];
-
-const hours = [
-  { day: 'Monday – Thursday', time: '08:00 – 16:30', highlight: true },
-  { day: 'Friday', time: '08:00 – 11:00', highlight: true },
-  { day: 'Saturday – Sunday', time: 'Closed', highlight: false },
-];
-
 export default function ContactPage() {
+  const s = useSettings();
+  const tel = (v) => `tel:${(v || '').replace(/[^\d+]/g, '')}`;
+
+  const contactCards = [
+    { icon: PhoneIcon, title: 'Call Us', value: s.phone_landline, action: tel(s.phone_landline), color: 'bg-teal-100/60 text-teal-700' },
+    { icon: MessageCircleIcon, title: 'WhatsApp', value: s.phone_mobile, action: `https://wa.me/${s.whatsapp}`, color: 'bg-green-100/60 text-green-600' },
+    { icon: MailIcon, title: 'Email', value: s.email, action: `mailto:${s.email}`, color: 'bg-blue-100/60 text-blue-600' },
+  ];
+
+  const hours = [
+    { day: 'Weekdays', time: s.hours_weekdays, highlight: true },
+    { day: 'Friday', time: s.hours_friday, highlight: true },
+    { day: 'Saturday – Sunday', time: s.hours_weekend, highlight: false },
+  ];
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
 
@@ -88,7 +91,7 @@ export default function ContactPage() {
                 </p>
                 <p className="mb-4 flex items-center gap-2 text-[0.9rem] text-slate">
                   <PhoneIcon size={15} className="shrink-0 text-hope-teal" />
-                  {b.phone}
+                  {s.phone_mobile || b.phone}
                 </p>
                 <p className="mb-5 text-[0.85rem] text-slate leading-relaxed">{b.note}</p>
                 <div className="mt-auto flex items-center gap-1.5 text-sm font-bold text-hope-navy transition-colors group-hover:text-hope-accent">

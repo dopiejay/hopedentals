@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PhoneIcon, MapPinIcon, MessageCircleIcon } from './Icons';
 import Wordmark from './Wordmark';
+import useSettings from '../hooks/useSettings';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -11,6 +12,9 @@ const navLinks = [
 ];
 
 export default function Footer() {
+  const s = useSettings();
+  const tel = (v) => `tel:${(v || '').replace(/[^\d+]/g, '')}`;
+
   return (
     <footer className="bg-ink px-6 pt-15 pb-8 text-white">
       <div className="mx-auto max-w-6xl">
@@ -28,16 +32,16 @@ export default function Footer() {
               <span className="flex items-start gap-2">
                 <MapPinIcon size={14} className="mt-0.5 shrink-0 text-hope-accent" />
                 <span>
-                  Chichiri Shopping Centre &middot; Blantyre
+                  {s.address} &middot; {s.area}
                 </span>
               </span>
-              <a href="tel:+2651876966" className="flex items-center gap-2 transition-colors hover:text-white">
+              <a href={tel(s.phone_landline)} className="flex items-center gap-2 transition-colors hover:text-white">
                 <PhoneIcon size={14} className="text-hope-accent" />
-                +265 1 876 966
+                {s.phone_landline}
               </a>
-              <a href="tel:+265883449299" className="flex items-center gap-2 transition-colors hover:text-white">
+              <a href={tel(s.phone_mobile)} className="flex items-center gap-2 transition-colors hover:text-white">
                 <PhoneIcon size={14} className="text-hope-accent" />
-                +265 883 449 299
+                {s.phone_mobile}
               </a>
             </div>
           </div>
@@ -63,20 +67,17 @@ export default function Footer() {
             </h4>
             <div className="mb-6 flex flex-col gap-2 text-[0.9rem] text-white/60">
               <div className="flex justify-between">
-                <span>Monday – Thursday</span>
-                <span className="font-medium text-white">08:00 – 16:30</span>
+                <span className="font-semibold text-white">{s.hours_weekdays}</span>
               </div>
               <div className="flex justify-between">
-                <span>Friday</span>
-                <span className="font-medium text-white">08:00 – 11:00</span>
+                <span className="font-semibold text-white">{s.hours_friday}</span>
               </div>
               <div className="flex justify-between">
-                <span>Saturday – Sunday</span>
-                <span className="font-medium text-white/40">Closed</span>
+                <span className="font-medium text-white/40">{s.hours_weekend}</span>
               </div>
             </div>
             <a
-              href="https://wa.me/265883449299"
+              href={`https://wa.me/${s.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-hope-teal px-5 py-2.5 text-sm font-bold text-white transition-all hover:-translate-y-px"

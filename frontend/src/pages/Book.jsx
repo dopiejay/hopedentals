@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CalendarIcon, ClockIcon, UserIcon, MessageCircleIcon, CheckCircleIcon, ArrowRightIcon, ArrowLeftIcon, PhoneIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
+import useServices from '../hooks/useServices';
+import useSettings from '../hooks/useSettings';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
-const services = [
+const fallbackServices = [
   'General Consultation',
   'Dental Examination & Cleaning',
   'Tooth Fillings / Repair',
@@ -33,6 +35,10 @@ export default function BookPage() {
   const [form, setForm] = useState({ service: '', date: '', time: '', name: '', phone: '', email: '', message: '' });
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const { services, loading } = useServices();
+  const s = useSettings();
+  const serviceNames = loading && services.length === 0 ? fallbackServices : services.map((svc) => svc.title);
+  const wa = `https://wa.me/${s.whatsapp}`;
 
   function update(field, value) { setForm((prev) => ({ ...prev, [field]: value })); }
   function canNext() {
@@ -72,7 +78,7 @@ export default function BookPage() {
             <p className="mb-8 text-slate">We'll contact you shortly to confirm your appointment.</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link to="/" className="rounded-full bg-ink px-7 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px hover:bg-hope-navy">Back to Home</Link>
-              <a href="https://wa.me/265883449299" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-ink px-7 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-ink hover:text-white">
+              <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-ink px-7 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-ink hover:text-white">
                 <MessageCircleIcon size={16} /> Prefer WhatsApp? Chat with us
               </a>
             </div>
@@ -114,17 +120,17 @@ export default function BookPage() {
 
           {step === 1 && (
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {services.map((s) => (
+              {serviceNames.map((sName) => (
                 <button
-                  key={s}
-                  onClick={() => update('service', s)}
+                  key={sName}
+                  onClick={() => update('service', sName)}
                   className={`rounded-2xl border-[1.5px] p-5 text-left transition-all duration-300 hover:-translate-y-0.5 ${
-                    form.service === s
+                    form.service === sName
                       ? 'border-hope-accent bg-hope-accent/5 shadow-lg shadow-hope-accent/10'
                       : 'border-stone bg-white hover:border-hope-accent/50 hover:shadow-md'
                   }`}
                 >
-                  <span className="block font-bold text-ink">{s}</span>
+                  <span className="block font-bold text-ink">{sName}</span>
                 </button>
               ))}
             </div>
@@ -222,7 +228,7 @@ export default function BookPage() {
 
           <div className="mt-8 text-center">
             <p className="text-[0.82rem] text-slate">Prefer WhatsApp?</p>
-            <a href="https://wa.me/265883449299" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-hope-navy hover:text-hope-accent hover:underline">
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-hope-navy hover:text-hope-accent hover:underline">
               <MessageCircleIcon size={15} /> Chat with us directly
             </a>
           </div>

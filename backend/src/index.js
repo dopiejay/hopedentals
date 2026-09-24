@@ -8,6 +8,7 @@ import authRouter from './routes/auth.js';
 import teamRouter from './routes/team.js';
 import testimonialsRouter from './routes/testimonials.js';
 import contactRouter from './routes/contact.js';
+import settingsRouter from './routes/settings.js';
 
 dotenv.config({ quiet: true });
 
@@ -40,6 +41,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/team', teamRouter);
 app.use('/api/testimonials', testimonialsRouter);
 app.use('/api/contact', contactRouter);
+app.use('/api/settings', settingsRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Not found.' });
@@ -47,5 +49,5 @@ app.use((req, res) => {
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-  console.log(`Shalom Dental API listening on port ${PORT}`);
+  console.log(`HopeDentals API listening on port ${PORT}`);
 });

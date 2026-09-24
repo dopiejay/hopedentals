@@ -9,7 +9,7 @@ async function seedAdmin() {
   const [, , email, password] = process.argv;
 
   if (!email || !password) {
-    console.error('Usage: node src/seed-admin.js "you@example.com" "your-password"');
+    console.error('Usage: node src/seed-admin.js "admin@hope.com" "admin123"');
     process.exit(1);
   }
 

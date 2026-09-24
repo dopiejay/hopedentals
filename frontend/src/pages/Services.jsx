@@ -1,26 +1,29 @@
 import { Link } from 'react-router-dom';
 import { CalendarIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
-import { services } from '../data/services';
+import useServices from '../hooks/useServices';
 
 export default function ServicesPage() {
+  const { services, loading } = useServices();
+
   return (
     <>
       <PageHero eyebrow="Our services" title="Comprehensive dental care, close to you." crumb="Services" image="/images/general.jpg" />
 
       <section className="bg-white px-6 py-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => {
-            return (
+          {loading ? (
+            <p className="py-12 text-center text-sm text-slate">Loading services…</p>
+          ) : (
+            services.map((s) => (
               <Link
-                key={s.title}
+                key={s.id}
                 to={`/services/${s.slug}`}
                 className="group relative block overflow-hidden rounded-3xl border border-stone/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10"
               >
-                {/* Service image */}
                 <div className="relative h-60 overflow-hidden">
                   <img
-                    src={s.img}
+                    src={s.image}
                     alt={s.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
@@ -36,8 +39,8 @@ export default function ServicesPage() {
                   </span>
                 </div>
               </Link>
-            );
-          })}
+            ))
+          )}
         </div>
       </section>
 

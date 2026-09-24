@@ -1,4 +1,4 @@
--- Shalom Dental Services — database schema
+-- HopeDentals — database schema
 -- Run via `npm run migrate`, or paste directly into the Neon SQL editor.
 
 CREATE TABLE IF NOT EXISTS services (
@@ -29,6 +29,13 @@ DO $$ BEGIN
   ALTER TABLE services ADD COLUMN IF NOT EXISTS sort_order INTEGER NOT NULL DEFAULT 0;
 EXCEPTION WHEN duplicate_column THEN NULL;
 END $$;
+
+-- Deduplicate services that older seed statements created, keeping the lowest id
+-- so existing appointment references stay valid.
+DELETE FROM services a USING services b
+  WHERE a.id > b.id AND a.name = b.name;
+
+CREATE UNIQUE INDEX IF NOT EXISTS services_name_key ON services (name);
 
 CREATE TABLE IF NOT EXISTS appointments (
   id SERIAL PRIMARY KEY,
@@ -68,6 +75,11 @@ CREATE TABLE IF NOT EXISTS team_members (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+DELETE FROM team_members a USING team_members b
+  WHERE a.id > b.id AND a.name = b.name;
+
+CREATE UNIQUE INDEX IF NOT EXISTS team_members_name_key ON team_members (name);
+
 CREATE TABLE IF NOT EXISTS testimonials (
   id SERIAL PRIMARY KEY,
   patient_name TEXT NOT NULL,
@@ -78,6 +90,11 @@ CREATE TABLE IF NOT EXISTS testimonials (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+DELETE FROM testimonials a USING testimonials b
+  WHERE a.id > b.id AND a.patient_name = b.patient_name AND a.quote = b.quote;
+
+CREATE UNIQUE INDEX IF NOT EXISTS testimonials_body_key ON testimonials (patient_name, quote);
+
 CREATE TABLE IF NOT EXISTS contact_messages (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
@@ -87,6 +104,24 @@ CREATE TABLE IF NOT EXISTS contact_messages (
   is_read BOOLEAN NOT NULL DEFAULT false,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+INSERT INTO settings (key, value) VALUES
+  ('phone_landline', '+265 1 876 966'),
+  ('phone_mobile', '+265 883 449 299'),
+  ('whatsapp', '265883449299'),
+  ('email', 'info@hopedentals.com'),
+  ('address', 'Chichiri Shopping Centre'),
+  ('area', 'Blantyre, Malawi'),
+  ('hours_weekdays', 'Mon – Thu 08:00 – 16:30'),
+  ('hours_friday', 'Fri 08:00 – 11:00'),
+  ('hours_weekend', 'Sat – Sun Closed')
+ON CONFLICT (key) DO NOTHING;
 
 -- Seed services with descriptions
 INSERT INTO services (name, description, sort_order) VALUES
@@ -99,16 +134,16 @@ INSERT INTO services (name, description, sort_order) VALUES
   ('Dental Implants', 'Natural-looking, long-term tooth replacement.', 7),
   ('Dental Laboratory', 'Crowns, bridges, and prosthetics crafted in-house.', 8),
   ('Not sure — advise me', 'Book a consultation and we''ll recommend the right treatment.', 9)
-ON CONFLICT DO NOTHING;
+ON CONFLICT (name) DO NOTHING;
 
 -- Seed team members
 INSERT INTO team_members (name, role, bio, specialties, sort_order) VALUES
-  ('Clinical Lead', 'Head of Department', 'Leads a Shalom Dental Services branch department with experience in fixed orthodontics and prosthodontics, supporting the clinical team across general, orthodontic, and restorative care.', ARRAY['Orthodontics', 'Prosthodontics'], 1)
-ON CONFLICT DO NOTHING;
+  ('Clinical Lead', 'Head of Department', 'Leads the HopeDentals clinical department with experience in fixed orthodontics and prosthodontics, supporting the team across general, orthodontic, and restorative care.', ARRAY['Orthodontics', 'Prosthodontics'], 1)
+ON CONFLICT (name) DO NOTHING;
 
 -- Seed testimonials
 INSERT INTO testimonials (patient_name, quote, rating, is_featured, sort_order) VALUES
-  ('Grace M.', 'Absolutely fantastic experience! The team made me feel so comfortable and the results exceeded my expectations. Highly recommend Shalom Dental.', 5, true, 1),
-  ('Chimwemwe K.', 'My children actually look forward to their dental visits now. The team is incredibly patient and gentle with kids at the Limbe branch. We love it here.', 5, true, 2),
-  ('Thandizo P.', 'Professional, modern, and genuinely caring. Booking at a branch near us was simple and the whole process was seamless. Best dental experience in Blantyre.', 5, true, 3)
-ON CONFLICT DO NOTHING;
+  ('Grace M.', 'Absolutely fantastic experience! The team made me feel so comfortable and the results exceeded my expectations. Highly recommend HopeDentals.', 5, true, 1),
+  ('Chimwemwe K.', 'My children actually look forward to their dental visits now. The team is incredibly patient and gentle with children. We love it here.', 5, true, 2),
+  ('Thandizo P.', 'Professional, modern, and genuinely caring. Booking was simple and the whole process was seamless. Best dental experience in Blantyre.', 5, true, 3)
+ON CONFLICT (patient_name, quote) DO NOTHING;

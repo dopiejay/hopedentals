@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useAdminAuth } from '../context/AdminAuthContext';
 import ToothIcon from '../../components/ToothIcon';
-import { MonitorIcon, CalendarIcon, MailIcon } from '../../components/Icons';
+import { MonitorIcon, CalendarIcon, MailIcon, WrenchIcon } from '../../components/Icons';
 
 const navItems = [
   { to: '/admin', label: 'Dashboard', icon: MonitorIcon, end: true },
   { to: '/admin/appointments', label: 'Appointments', icon: CalendarIcon },
   { to: '/admin/messages', label: 'Messages', icon: MailIcon },
+  { to: '/admin/settings', label: 'Settings', icon: WrenchIcon },
 ];
 
 export default function AdminLayout() {
@@ -24,7 +25,7 @@ export default function AdminLayout() {
       >
         <div className="flex items-center gap-2 border-b border-white/10 px-6 py-5 font-display text-lg font-bold">
           <ToothIcon className="text-hope-accent" size={24} />
-          Hope<em className="not-italic text-hope-teal">Dental</em>
+          Hope<em className="not-italic text-hope-teal">Dentals</em>
         </div>
 
         <nav className="flex-1 space-y-1 px-3 py-5">
@@ -78,7 +79,7 @@ export default function AdminLayout() {
             <span className="h-0.5 w-5.5 rounded bg-white" />
             <span className="h-0.5 w-5.5 rounded bg-white" />
           </button>
-          <span className="font-display font-bold text-white">Hope Dental Admin</span>
+          <span className="font-display font-bold text-white">HopeDentals Admin</span>
         </header>
 
         <main className="p-6 md:p-10">

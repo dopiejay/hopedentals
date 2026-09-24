@@ -1,13 +1,15 @@
+import { useEffect, useState } from 'react';
 import { HeartHandshakeIcon, SparklesIcon } from '../components/Icons';
 import PageHero from '../components/PageHero';
 const aboutImage = 'images/team.jpg';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 const purpose = [
   { icon: HeartHandshakeIcon, title: 'Our Mission', desc: 'To bring skilled, affordable dental care within easy reach of our patients — combining experienced clinicians, modern equipment, and a warm, patient-first approach at our Chichiri clinic.', color: 'bg-hope-teal/10 text-hope-teal', image: 'images/mission.jpg' },
   { icon: SparklesIcon, title: 'Our Vision', desc: 'To be one of Blantyre\u2019s most trusted dental practices — recognised for quality, integrity, and lasting patient relationships built on every visit.', color: 'bg-hope-accent/10 text-hope-accent', image: 'images/vision.jpg' },
 ];
 
-const team = [
+const fallbackTeam = [
   {
     name: 'Clinical Lead',
     role: 'Head of Department',
@@ -35,6 +37,28 @@ const team = [
 ];
 
 export default function AboutPage() {
+  const [team, setTeam] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_URL}/api/team`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((rows) => {
+        if (rows && rows.length > 0) {
+          setTeam(
+            rows.map((m) => ({
+              name: m.name,
+              role: m.role || 'Clinical Care',
+              desc: m.bio || '',
+              img: m.photo_url || 'images/imagePlaceholder.jpg',
+            }))
+          );
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const teamMembers = team.length > 0 ? team : fallbackTeam;
+
   return (
     <>
       <PageHero eyebrow="Our story" title="A legacy of caring for smiles." crumb="About Us" image="https://images.pexels.com/photos/3845729/pexels-photo-3845729.jpeg?auto=compress&cs=tinysrgb&w=800" />
@@ -113,7 +137,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {team.map((m) => (
+          {teamMembers.map((m) => (
             <TeamCard key={m.name} member={m} />
           ))}
         </div>

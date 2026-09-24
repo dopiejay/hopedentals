@@ -7,7 +7,7 @@ export default function Wordmark({ light = false }) {
       className={`flex items-center gap-2 font-display text-xl font-bold ${light ? 'text-white' : 'text-ink'}`}
     >
       <span>
-        Hope<em className="not-italic text-hope-teal">Dental</em>
+        Hope<em className="not-italic text-hope-teal">Dentals</em>
       </span>
     </Link>
   );

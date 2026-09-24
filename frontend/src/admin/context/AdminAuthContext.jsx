@@ -3,7 +3,7 @@ import { login as apiLogin } from '../api';
 
 const AdminAuthContext = createContext(null);
 
-const STORAGE_KEY = 'shalom_admin_auth';
+const STORAGE_KEY = 'hope_admin_auth';
 
 function loadStored() {
   try {

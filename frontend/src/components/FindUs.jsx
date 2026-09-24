@@ -1,13 +1,17 @@
 import { MapPinIcon, PhoneIcon, ClockIcon, MessageCircleIcon } from './Icons';
-
-const details = [
-  { icon: MapPinIcon, label: 'Location', value: 'Chichiri Shopping Centre · Blantyre' },
-  { icon: PhoneIcon, label: 'Landline', value: '+265 1 876 966', href: 'tel:+2651876966' },
-  { icon: PhoneIcon, label: 'Mobile', value: '+265 883 449 299', href: 'tel:+265883449299' },
-  { icon: ClockIcon, label: 'Hours', value: 'Mon–Thu 08:00 – 16:30 · Fri 08:00 – 11:00' },
-];
+import useSettings from '../hooks/useSettings';
 
 export default function FindUs() {
+  const s = useSettings();
+  const tel = (v) => `tel:${(v || '').replace(/[^\d+]/g, '')}`;
+
+  const details = [
+    { icon: MapPinIcon, label: 'Location', value: `${s.address} · ${s.area}` },
+    { icon: PhoneIcon, label: 'Landline', value: s.phone_landline, href: tel(s.phone_landline) },
+    { icon: PhoneIcon, label: 'Mobile', value: s.phone_mobile, href: tel(s.phone_mobile) },
+    { icon: ClockIcon, label: 'Hours', value: `${s.hours_weekdays} · ${s.hours_friday}` },
+  ];
+
   return (
     <section id="find-us" className="bg-white px-6 py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2">
@@ -39,7 +43,7 @@ export default function FindUs() {
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://wa.me/265883449299"
+              href={`https://wa.me/${s.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-hope-teal px-6 py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-px"
@@ -48,7 +52,7 @@ export default function FindUs() {
               Message on WhatsApp
             </a>
             <a
-              href="tel:+2651876966"
+              href={tel(s.phone_landline)}
               className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors hover:bg-ink hover:text-white"
             >
               <PhoneIcon size={16} />

@@ -4,7 +4,7 @@ const doctorImage = 'images/imagePlaceholder.jpg';
 
 const teamRoles = [
   { title: 'Dentists', desc: 'General, orthodontic, and restorative clinical care.' },
-  { title: 'Dental Therapists', desc: 'Routine and preventive care at each branch.' },
+  { title: 'Dental Therapists', desc: 'Routine and preventive care at the clinic.' },
   { title: 'Front Desk Team', desc: 'Your first hello — appointments, reminders, and questions answered.' },
 ];
 
@@ -21,7 +21,7 @@ export default function TeamPreview() {
         <div className="relative h-full min-h-[300px] overflow-hidden">
           <img
             src={doctorImage}
-            alt="Shalom Dental clinical team — dentists and dental therapists"
+            alt="HopeDentals clinical team — dentists and dental therapists"
             className="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
@@ -30,12 +30,12 @@ export default function TeamPreview() {
 
         {/* Info */}
         <div className="p-8 text-center md:text-left">
-          <h3 className="mb-1.5 font-display text-2xl font-bold">Shalom Clinical Team</h3>
-          <p className="mb-3.5 text-sm font-bold text-hope-navy">Dentists · Dental Therapists · Our Branches</p>
+          <h3 className="mb-1.5 font-display text-2xl font-bold">HopeDentals Clinical Team</h3>
+          <p className="mb-3.5 text-sm font-bold text-hope-navy">Dentists · Dental Therapists · Chichiri Clinic</p>
           <p className="mb-4.5 text-slate leading-relaxed">
-            A dedicated team of dentists and dental therapists delivers care across our Blantyre
-            and Limbe branches — offering general, orthodontic, and restorative treatment with
-            patient comfort always in mind.
+            A dedicated team of dentists and dental therapists delivers care at our Chichiri
+            Shopping Centre clinic — offering general, orthodontic, and restorative treatment
+            with patient comfort always in mind.
           </p>
           <div className="mb-5 flex flex-wrap justify-center gap-2.5 md:justify-start">
             {['General Dentistry', 'Orthodontics', 'Restorative Care'].map((t) => (
