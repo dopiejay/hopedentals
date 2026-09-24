@@ -34,7 +34,7 @@ export default function WhyUs() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-2">
         {/* Left: copy + points */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sun uppercase">Why Hope</p>
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-white uppercase">Why Hope</p>
           <h2 className="mb-4 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-semibold leading-tight text-white">
             The trusted choice for <span className="text-hope-sun">your care</span>.
           </h2>
