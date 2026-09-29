@@ -123,18 +123,24 @@ INSERT INTO settings (key, value) VALUES
   ('hours_weekend', 'Sat – Sun Closed')
 ON CONFLICT (key) DO NOTHING;
 
--- Seed services with descriptions
-INSERT INTO services (name, description, sort_order) VALUES
-  ('General Consultation', 'Routine dental care and preventive treatment.', 1),
-  ('Routine Check-up & Cleaning', 'Professional scaling and polishing for a healthier smile.', 2),
-  ('Orthodontics / Braces', 'Straighter teeth and improved alignment for all ages.', 3),
-  ('Restorative (Crowns, Bridges, Dentures)', 'Durable restorations built to match your natural teeth.', 4),
-  ('Tooth Pain', 'Prompt care for toothaches and sensitivity.', 5),
-  ('Oral Surgery', 'Extractions and minor surgical procedures.', 6),
-  ('Dental Implants', 'Natural-looking, long-term tooth replacement.', 7),
-  ('Dental Laboratory', 'Crowns, bridges, and prosthetics crafted in-house.', 8),
-  ('Not sure — advise me', 'Book a consultation and we''ll recommend the right treatment.', 9)
-ON CONFLICT (name) DO NOTHING;
+-- Seed services with copy and imagery. image_url points at the frontend's
+-- /images/... assets so every card has its own picture instead of one shared
+-- fallback. Re-running the migration only fills blanks, so anything edited in
+-- the admin panel is left untouched.
+INSERT INTO services (name, description, long_description, image_url, sort_order) VALUES
+  ('General Consultation', 'Routine dental care and preventive treatment.', 'General dentistry covers the prevention, diagnosis and treatment of common dental conditions. Regular visits keep your teeth and gums healthy and catch small problems before they become bigger and more expensive ones.', '/images/general.jpg', 1),
+  ('Routine Check-up & Cleaning', 'Professional scaling and polishing for a healthier smile.', 'A routine check-up examines your teeth, gums and overall oral health, followed by a professional clean that removes the plaque and tartar daily brushing cannot reach. We then talk through any next steps and how to keep things healthy between visits.', '/images/general.jpg', 2),
+  ('Orthodontics / Braces', 'Straighter teeth and improved alignment for all ages.', 'Orthodontics straightens teeth and improves how your upper and lower teeth meet. Treatment uses traditional braces and careful follow-up, planned visit by visit for children, teenagers and adults alike.', '/images/orthodontics.jpg', 3),
+  ('Restorative (Crowns, Bridges, Dentures)', 'Durable restorations built to match your natural teeth.', 'Restorative dentistry repairs and replaces teeth that are damaged or missing, restoring both function and appearance. Crowns, bridges and dentures are shaped and shaded to match your natural bite and smile.', '/images/crowns-bridges.jpg', 4),
+  ('Tooth Pain', 'Prompt care for toothaches and sensitivity.', 'Toothache and sensitivity are common, and the cause is usually something that can be treated. We assess the tooth and the surrounding area, relieve the pain, and explain your options clearly before any treatment begins.', '/images/xray.jpg', 5),
+  ('Oral Surgery', 'Extractions and minor surgical procedures.', 'Oral surgery covers the removal of teeth and other surgical procedures within the mouth. Whether a simple extraction or a more complex surgical removal, the procedure is planned carefully and carried out with your comfort in mind.', '/images/xray.jpg', 6),
+  ('Dental Implants', 'Natural-looking, long-term tooth replacement.', 'Dental implants replace missing teeth with a titanium post placed in the jaw, topped with a natural-looking crown. They offer a strong, lasting alternative to removable teeth and are restored to match your smile.', '/images/cosmetic.jpg', 7),
+  ('Dental Laboratory', 'Crowns, bridges, and prosthetics crafted in-house.', 'Restorations are crafted in our own on-site dental laboratory, so the team controlling shade, shape and fit of your crown, bridge or denture is the same team that will be fitting it.', '/images/crowns-bridges.jpg', 8),
+  ('Not sure — advise me', 'Book a consultation and we''ll recommend the right treatment.', 'You do not need to know what is wrong before you call. Book a consultation and we will examine you, explain what we find in plain terms, and recommend the treatment that is right for you.', '/images/general.jpg', 9)
+ON CONFLICT (name) DO UPDATE SET
+  description = COALESCE(NULLIF(services.description, ''), EXCLUDED.description),
+  long_description = COALESCE(NULLIF(services.long_description, ''), EXCLUDED.long_description),
+  image_url = COALESCE(NULLIF(services.image_url, ''), EXCLUDED.image_url);
 
 -- Seed team members
 INSERT INTO team_members (name, role, bio, specialties, sort_order) VALUES

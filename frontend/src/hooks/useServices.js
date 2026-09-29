@@ -28,13 +28,19 @@ export function serviceSlug(name) {
   return STATIC_SLUG_MAP[name] || slugify(name);
 }
 
-// Card presentation lives in the static data; the API only supplies the copy.
+// Card presentation lives in the static data; the API supplies the live copy.
+// The static entry is also the fallback for image/copy, so a service that has
+// no image_url or description in the database yet still renders its own card
+// instead of falling back to the same image and an empty description.
 function presentation(slug) {
   const match = staticServices.find((s) => s.slug === slug);
   return {
     icon: match?.icon,
     color: match?.color || 'from-hope-accent/20 to-hope-sky/10',
     iconColor: match?.iconColor || 'text-hope-accent bg-hope-accent/10',
+    image: match?.img || DEFAULT_IMAGE,
+    desc: match?.desc || '',
+    longDesc: match?.intro || '',
   };
 }
 
@@ -65,14 +71,17 @@ export default function useServices() {
         setServices(
           rows.map((r) => {
             const slug = serviceSlug(r.name);
+            const base = presentation(slug);
             return {
               id: r.id,
               slug,
               title: r.name,
-              desc: r.description || '',
-              long_description: r.long_description || '',
-              image: r.image_url || DEFAULT_IMAGE,
-              ...presentation(slug),
+              desc: r.description || base.desc,
+              long_description: r.long_description || base.longDesc,
+              image: r.image_url || base.image,
+              icon: base.icon,
+              color: base.color,
+              iconColor: base.iconColor,
             };
           }),
         );
