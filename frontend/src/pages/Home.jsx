@@ -5,8 +5,6 @@ import TrustIntro from '../components/TrustIntro';
 import ServicesPreview from '../components/ServicesPreview';
 //import WhyUs from '../components/WhyUs';
 import TreatmentJourney from '../components/TreatmentJourney';
-import Reviews from '../components/Reviews';
-//import FindUs from '../components/FindUs';
 import useSettings from '../hooks/useSettings';
 
 export default function Home() {
@@ -28,7 +26,6 @@ export default function Home() {
       <ServicesPreview />
       {/* <WhyUs /> */}
       <TreatmentJourney />
-      <Reviews />
       {/* <FindUs /> */}
 
       {/* CTA Section */}

@@ -12,10 +12,12 @@ export default function TreatmentJourney() {
     <section className="bg-stone px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase leading-eyebrow">How it works</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
-            Your journey to a <span className=" text-hope-accent">healthier smile</span>.
+          <h2 className="mb-3 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
+            Your journey to a <span className="text-hope-teal">healthier smile</span>.
           </h2>
+          <p className="text-[1.05rem] text-slate">
+            Three simple steps from your first call to your first appointment.
+          </p>
         </div>
 
         <div className="relative flex flex-col items-center justify-between gap-8 sm:flex-row sm:items-start sm:gap-4">

@@ -67,5 +67,3 @@ Do not pitch "let me help a new clinic get started." Pitch:
 - If interested → offer a short branded concept (already built locally) tailored
   to whatever they confirm; agree next meeting.
 - Always collect: primary phone, email, owner/manager name.
-
-The top-bar must have blue bg color, make the hero heading a bit bolder. we don;t beed the phone number and the location etc  (hero section, after the two buttons). All the headings in the sections but all be straight. Let the bg color of 'WELCOME TO HOPE DENTAL ...." be light gray like the "WHY HOPE" section's bg. Make the HopeDentals logo a little more bolder
