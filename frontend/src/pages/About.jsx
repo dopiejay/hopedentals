@@ -102,10 +102,10 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-tr from-hope-teal/20 to-transparent" />
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
               An established practice
             </p>
-            <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight">
+            <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading">
               A trusted name in Malawian dental care
             </h2>
             <p className="mb-4 text-slate leading-relaxed">
@@ -125,10 +125,10 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="bg-gradient-to-br from-stone to-white px-6 py-24">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
             Our mission &amp; vision
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight text-ink">
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading text-ink">
             What drives us, every single day
           </h2>
         </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     <Icon size={20} />
                   </span>
                 </div>
-                <h3 className="mb-2 font-display text-xl font-medium text-ink">{p.title}</h3>
+                <h3 className="mb-2 font-display text-xl font-medium leading-heading text-ink">{p.title}</h3>
                 <p className="text-[0.92rem] text-slate leading-relaxed">{p.desc}</p>
               </div>
             );
@@ -165,10 +165,10 @@ export default function AboutPage() {
       {/* Our Approach */}
       <section className="bg-ink px-6 py-24 text-white">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
             How we work
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight text-white">
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading text-white">
             A four-step approach to <span className="italic text-hope-sky">every patient</span>
           </h2>
         </div>
@@ -191,8 +191,8 @@ export default function AboutPage() {
       {/* Team Section */}
       <section id="team" className="bg-paper px-6 py-24">
         <div className="mx-auto mb-14 max-w-xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">Meet the team</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight text-ink">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">Meet the team</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading text-ink">
             The people behind your smile
           </h2>
         </div>
@@ -225,7 +225,7 @@ function TeamCard({ member }) {
 
       {/* Name + role */}
       <div className="absolute inset-x-0 bottom-0 p-5">
-        <h3 className="font-display text-lg font-medium leading-snug text-white">{member.name}</h3>
+        <h3 className="font-display text-lg font-medium leading-heading text-white">{member.name}</h3>
         <p className="mt-0.5 text-[0.72rem] font-bold tracking-[0.12em] text-hope-sky uppercase">
           {member.role}
         </p>

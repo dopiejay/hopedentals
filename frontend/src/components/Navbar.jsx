@@ -27,19 +27,19 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-stone bg-paper">
       {/* Top contact strip — phone on the left, hours + location on the right */}
-      <div className="bg-white text-[0.78rem] text-slate">
+      <div className="bg-hope-navy text-[0.78rem] text-white/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-6 py-2">
-          <a href={tel(s.phone_mobile)} className="flex items-center gap-1.5 font-bold text-ink transition-colors hover:text-hope-teal">
-            <PhoneIcon size={13} className="text-hope-accent" />
+          <a href={tel(s.phone_mobile)} className="flex items-center gap-1.5 font-bold text-white transition-colors hover:text-hope-sky">
+            <PhoneIcon size={13} className="text-hope-sky" />
             {s.phone_mobile}
           </a>
           <div className="flex items-center gap-x-6">
             <span className="flex items-center gap-1.5">
-              <ClockIcon size={13} className="text-hope-accent" />
+              <ClockIcon size={13} className="text-hope-sky" />
               Mon &ndash; Sat
             </span>
             <span className="hidden items-center gap-1.5 sm:flex">
-              <MapPinIcon size={13} className="text-hope-accent" />
+              <MapPinIcon size={13} className="text-hope-sky" />
               {s.area}
             </span>
           </div>

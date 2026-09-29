@@ -12,8 +12,8 @@ export default function TreatmentJourney() {
     <section className="bg-stone px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">How it works</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase leading-eyebrow">How it works</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
             Your journey to a <span className=" text-hope-accent">healthier smile</span>.
           </h2>
         </div>
@@ -29,7 +29,7 @@ export default function TreatmentJourney() {
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-hope-accent bg-white text-hope-accent transition-transform hover:scale-110 hover:bg-hope-accent hover:text-white">
                   <Icon size={24} />
                 </div>
-                <h3 className="mb-2 font-display text-lg font-medium text-ink">{step.title}</h3>
+                <h3 className="mb-2 font-display text-lg font-medium leading-heading text-ink">{step.title}</h3>
                 <p className="text-[0.88rem] text-slate leading-relaxed">{step.desc}</p>
               </div>
             );

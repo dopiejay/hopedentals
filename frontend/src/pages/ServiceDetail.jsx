@@ -26,7 +26,7 @@ export default function ServiceDetail() {
         <p className="text-slate">Loading&hellip;</p>
       ) : (
         <div className="mx-auto max-w-md">
-          <h1 className="mb-3 font-display text-3xl font-medium">Service not found</h1>
+          <h1 className="mb-3 font-display text-3xl font-medium leading-heading">Service not found</h1>
           <p className="mb-8 text-slate">
             The service you are looking for doesn&apos;t exist or has moved.
           </p>
@@ -72,7 +72,7 @@ function Detail({ service, image }) {
             </span>
           </div>
           <div>
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase leading-eyebrow">
               What is this treatment?
             </p>
             <p className="text-slate leading-relaxed">{intro}</p>
@@ -108,10 +108,10 @@ function Detail({ service, image }) {
       {hasSteps && (
         <section className="bg-ink px-6 py-24 text-white">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
               What to expect
             </p>
-            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-tight text-white">
+            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-heading text-white">
               A simple, guided process
             </h2>
           </div>
@@ -126,7 +126,7 @@ function Detail({ service, image }) {
                 <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-hope-accent/20 font-display text-lg font-bold text-hope-sky">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mb-2 font-display text-lg font-medium text-white">{step.title}</h3>
+                <h3 className="mb-2 font-display text-lg font-medium leading-heading text-white">{step.title}</h3>
                 <p className="text-[0.9rem] text-white/70 leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -138,10 +138,10 @@ function Detail({ service, image }) {
       {hasFaqs && (
         <section className="bg-paper px-6 py-20">
           <div className="mx-auto mb-10 max-w-2xl text-center">
-            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase">
+            <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-teal uppercase leading-eyebrow">
               Questions
             </p>
-            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-tight text-ink">
+            <h2 className="font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-heading text-ink">
               Frequently asked questions
             </h2>
           </div>

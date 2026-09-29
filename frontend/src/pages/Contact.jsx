@@ -103,10 +103,10 @@ export default function ContactPage() {
       {/* Contact cards */}
       <section className="bg-white px-6 py-20">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
             Reach us
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight text-ink">
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading text-ink">
             One clinic, close to you
           </h2>
         </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                 >
                   <Icon size={22} />
                 </span>
-                <h3 className="mb-1 font-display text-base font-medium text-ink">{c.title}</h3>
+                <h3 className="mb-1 font-display text-base font-medium leading-heading text-ink">{c.title}</h3>
                 <p className="text-[0.85rem] text-slate">{c.value}</p>
               </Wrapper>
             );
@@ -144,10 +144,10 @@ export default function ContactPage() {
       {/* Clinic + map */}
       <section className="bg-paper px-6 py-20">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
             Our location
           </p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-tight text-ink">
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] font-medium leading-heading text-ink">
             Visit us at Chichiri Shopping Centre
           </h2>
         </div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 </span>
               </div>
               <div className="relative z-10 flex flex-1 flex-col p-6">
-                <h3 className="mb-3 font-display text-xl font-medium text-ink">{b.name}</h3>
+                <h3 className="mb-3 font-display text-xl font-medium leading-heading text-ink">{b.name}</h3>
                 <p className="mb-3 flex items-start gap-2 text-[0.9rem] text-slate">
                   <MapPinIcon size={16} className="mt-0.5 shrink-0 text-hope-accent" />
                   <span>
@@ -211,7 +211,7 @@ export default function ContactPage() {
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-hope-accent/10 text-hope-accent">
                 <ClockIcon size={20} />
               </span>
-              <h3 className="font-display text-lg font-medium text-ink">Opening Hours</h3>
+              <h3 className="font-display text-lg font-medium leading-heading text-ink">Opening Hours</h3>
             </div>
             <div className="flex flex-col gap-3">
               {hours.map((h) => (
@@ -232,7 +232,7 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-sm">
-            <h3 className="mb-2 font-display text-xl font-medium text-ink">Send us a message</h3>
+            <h3 className="mb-2 font-display text-xl font-medium leading-heading text-ink">Send us a message</h3>
             <p className="mb-6 text-[0.9rem] text-slate">We&apos;ll get back to you as soon as possible.</p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">

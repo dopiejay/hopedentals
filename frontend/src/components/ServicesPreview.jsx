@@ -9,8 +9,8 @@ export default function ServicesPreview() {
   return (
     <section className="bg-white px-6 py-24">
       <div className="mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">What we offer</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-tight">
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">What we offer</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
           Dental care for every <span className="text-hope-accent">stage</span> of your smile.
         </h2>
       </div>
@@ -43,7 +43,7 @@ export default function ServicesPreview() {
                 </div>
 
                 <div className="relative z-10 p-6">
-                  <h3 className="mb-2 font-display text-[1.15rem] font-medium text-ink">{s.title}</h3>
+                  <h3 className="mb-2 font-display text-[1.15rem] font-medium leading-heading text-ink">{s.title}</h3>
                   <p className="mb-5 text-[0.9rem] text-slate leading-relaxed">{s.desc}</p>
                   <span className="inline-flex items-center gap-1.5 text-sm font-bold text-hope-teal transition-colors group-hover:text-hope-accent">
                     Explore Service

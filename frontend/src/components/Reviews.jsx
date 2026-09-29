@@ -26,8 +26,8 @@ export default function Reviews() {
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-hope-sky/5 blur-3xl" />
 
       <div className="relative z-10 mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">Patient Testimonials</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium text-white">
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">Patient Testimonials</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading text-white">
           Real experiences. Real smiles.
         </h2>
       </div>

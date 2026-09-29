@@ -44,7 +44,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="relative z-10 p-6">
-                    <h3 className="mb-2 font-display text-[1.15rem] font-medium text-ink">{s.title}</h3>
+                    <h3 className="mb-2 font-display text-[1.15rem] font-medium leading-heading text-ink">{s.title}</h3>
                     <p className="mb-5 text-[0.9rem] text-slate leading-relaxed">{s.desc}</p>
                     <span className="inline-flex items-center gap-1.5 text-sm font-bold text-hope-teal transition-colors group-hover:text-hope-accent">
                       Explore Service
@@ -60,7 +60,7 @@ export default function ServicesPage() {
 
       <section className="bg-gradient-to-r from-hope-teal to-hope-accent px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-xl">
-          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-tight">
+          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.3rem)] font-medium leading-heading">
             Not sure which service you need?
           </h2>
           <p className="mb-8 text-white/80">

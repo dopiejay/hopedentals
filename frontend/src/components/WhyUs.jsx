@@ -42,8 +42,8 @@ export default function WhyUs() {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">Why Hope</p>
-          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-tight">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">Why Hope</p>
+          <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
             The trusted choice for a <span className="italic text-hope-accent">healthier smile</span>.
           </h2>
         </div>
@@ -60,7 +60,7 @@ export default function WhyUs() {
                 <span className={`mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl ${f.color}`}>
                   <Icon size={24} />
                 </span>
-                <h3 className="mb-2 font-display text-lg font-medium text-ink">{f.title}</h3>
+                <h3 className="mb-2 font-display text-lg font-medium leading-heading text-ink">{f.title}</h3>
                 <p className="text-[0.88rem] text-slate leading-relaxed">{f.desc}</p>
               </div>
             );

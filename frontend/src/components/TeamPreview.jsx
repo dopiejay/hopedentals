@@ -13,8 +13,8 @@ export default function TeamPreview() {
   return (
     <section id="team" className="bg-paper px-6 py-24">
       <div className="mx-auto mb-14 max-w-xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">Meet the team</p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-tight">
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">Meet the team</p>
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
           The hands behind your <span className="text-hope-accent">smile</span>
         </h2>
       </div>
@@ -33,7 +33,7 @@ export default function TeamPreview() {
 
         {/* Info */}
         <div className="p-8 text-center md:text-left">
-          <h3 className="mb-1.5 font-display text-2xl font-medium">Hope Dental Surgery Clinical Team</h3>
+          <h3 className="mb-1.5 font-display text-2xl font-medium leading-heading">Hope Dental Surgery Clinical Team</h3>
           <p className="mb-3.5 text-sm font-bold text-hope-teal">Dentists · Dental Therapists · Chichiri Clinic</p>
           <p className="mb-4.5 text-slate leading-relaxed">
             A dedicated team of dentists and dental therapists delivers care at our Chichiri
@@ -65,7 +65,7 @@ export default function TeamPreview() {
             key={r.title}
             className="rounded-3xl border border-stone bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-hope-accent/5"
           >
-            <h4 className="mb-1 font-display text-base font-medium text-ink">{r.title}</h4>
+            <h4 className="mb-1 font-display text-base font-medium leading-heading text-ink">{r.title}</h4>
             <p className="text-[0.82rem] text-slate leading-relaxed">{r.desc}</p>
           </div>
         ))}

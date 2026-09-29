@@ -73,7 +73,7 @@ export default function BookPage() {
                 <CheckCircleIcon size={36} className="text-hope-sky" />
               </div>
             </div>
-            <h2 className="mb-3 font-display text-2xl font-medium">Appointment Request Received</h2>
+            <h2 className="mb-3 font-display text-2xl font-medium leading-heading">Appointment Request Received</h2>
             <p className="mb-3 text-slate">Thank you, {form.name}! We've received your request for <strong>{form.service}</strong> at <strong>Hope Dental Surgery</strong> on <strong>{form.date}</strong>.</p>
             <p className="mb-8 text-slate">We'll contact you shortly to confirm your appointment.</p>
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -110,8 +110,8 @@ export default function BookPage() {
           </div>
 
           <div className="mb-8 text-center">
-            <p className="text-[0.78rem] font-bold tracking-wider text-hope-accent uppercase">Step {step} of 3</p>
-            <h2 className="mt-1 font-display text-xl font-medium text-ink">
+            <p className="text-[0.78rem] font-bold tracking-wider text-hope-accent uppercase leading-eyebrow">Step {step} of 3</p>
+            <h2 className="mt-1 font-display text-xl font-medium leading-heading text-ink">
               {step === 1 && 'What do you need help with?'}
               {step === 2 && 'When would you like to visit?'}
               {step === 3 && 'Your details'}

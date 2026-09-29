@@ -35,10 +35,10 @@ export default function TrustIntro() {
 
         {/* Text side */}
         <div>
-          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+          <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
             Welcome to Hope Dental Surgery
           </p>
-          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-tight">
+          <h2 className="mb-5 font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
             A dental team built around <span className="text-hope-accent">your care.</span>
           </h2>
           <p className="mb-4 text-slate">

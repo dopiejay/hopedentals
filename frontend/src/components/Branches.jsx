@@ -6,10 +6,10 @@ export default function Branches() {
   return (
     <section id="branches" className="bg-white px-6 py-24">
       <div className="mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase">
+        <p className="mb-3 text-[0.8rem] font-bold tracking-[0.14em] text-hope-sky uppercase leading-eyebrow">
           Find a Branch
         </p>
-        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-tight">
+        <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-medium leading-heading">
           Choose your nearest <span className="italic text-hope-accent">Hope Dental Surgery</span> clinic.
         </h2>
         <p className="mt-4 text-slate">
@@ -23,7 +23,7 @@ export default function Branches() {
             key={b.slug}
             className="group relative flex flex-col rounded-3xl border border-stone/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10"
           >
-            <h3 className="mb-5 font-display text-xl font-medium text-ink">{b.name}</h3>
+            <h3 className="mb-5 font-display text-xl font-medium leading-heading text-ink">{b.name}</h3>
             <Link
               to="/contact"
               className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-hope-teal transition-colors group-hover:text-hope-accent"

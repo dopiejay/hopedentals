@@ -34,7 +34,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-hope-teal to-hope-accent px-6 py-20 text-center text-white">
         <div className="mx-auto max-w-xl">
-          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-medium leading-tight text-white">
+          <h2 className="mb-4 font-display text-[clamp(1.7rem,3vw,2.4rem)] font-medium leading-heading text-white">
             It&apos;s time to love your smile.
           </h2>
           <p className="mb-8 text-white/80">
