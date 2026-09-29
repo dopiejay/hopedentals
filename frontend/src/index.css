@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  /* Hope Dental Surgery — official brand palette (light + dark blue) */
+  --color-ink: #10232B;        /* near-black navy, used for dark sections */
+  --color-paper: #FBFBF9;      /* page background */
+  --color-stone: #F4F5F7;      /* light grey panels */
+  --color-slate: #6B7280;      /* muted body text */
+  --color-hope-navy: #083B48;  /* darkest blue — gradients, deep emphasis */
+  --color-hope-teal: #0F6E7E;  /* dark blue — links, eyebrows, active states */
+  --color-hope-accent: #1E93A0;/* light blue — icons, borders, focus rings */
+  --color-hope-sky: #5BC0D0;   /* light blue tint — text/fills on dark backgrounds */
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
